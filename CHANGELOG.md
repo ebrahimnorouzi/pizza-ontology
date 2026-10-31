@@ -3,6 +3,14 @@
 All notable changes to the Pizza Ontology. Versions follow [Semantic Versioning](https://semver.org/);
 each one is a release under `releases/<version>/` and a git tag `v<version>`.
 
+## [1.0.0] - 2026-10-31
+
+### Changed
+- First stable release. No change to the terms since 0.4.0: the three iterations are integrated,
+  every CQ test passes, the quality report has no errors and the ontology is in OWL 2 DL.
+  From here on a patch release changes no term, a minor one adds terms, a major one removes or
+  redefines one.
+
 ## [0.4.0] - 2026-10-31
 
 ### Added

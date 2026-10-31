@@ -12,13 +12,13 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
     <owl:Ontology rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl">
-        <owl:versionIRI rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/0.4.0"/>
+        <owl:versionIRI rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/1.0.0"/>
         <terms:description xml:lang="en">A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title xml:lang="en">Pizza Ontology</terms:title>
         <rdfs:label xml:lang="en">Pizza Ontology</rdfs:label>
-        <owl:priorVersion rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/0.3.0"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.4.0</owl:versionInfo>
+        <owl:priorVersion rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/0.4.0"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
