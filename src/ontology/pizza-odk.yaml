@@ -1,0 +1,24 @@
+# ODK configuration for Pizza Ontology
+# This project's Makefile calls robot directly, so it needs make and robot on
+# PATH - not Docker. Nothing regenerates the Makefile from this file:
+# ODK's `make update_repo` is not part of this project. Put your own
+# rules in pizza.Makefile, which the build includes
+# and never overwrites.
+id: pizza
+title: "Pizza Ontology"
+description: "A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology."
+uribase: https://ebrahimnorouzi.github.io/pizza-ontology
+license: https://creativecommons.org/licenses/by/4.0/
+robot_version: 1.9.8
+release_artefacts:
+  - full
+primary_release: full
+export_formats:
+  - owl
+import_group:
+  products: []
+robot_report:
+  use_labels: TRUE
+  fail_on: ERROR
+  report_on:
+    - edit
