@@ -5,4 +5,5 @@
          and the Makefile hands this file to robot with its catalog option, so
          those imports resolve from disk with no network. -->
     <uri id="User Entered Import Resolution" name="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/componency_import.owl" uri="imports/componency_import.owl"/>
+    <uri id="User Entered Import Resolution" name="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/classification_import.owl" uri="imports/classification_import.owl"/>
 </catalog>

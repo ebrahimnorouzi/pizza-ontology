@@ -31,3 +31,25 @@ Each query in this folder run against the released `pizza.owl` (reasoned with EL
 | pizza |
 |---|
 | diavola |
+
+## CQ4: Which pizzas on the menu are vegetarian?
+
+`cq4-vegetarian-pizzas.rq` - 3 row(s)
+
+| pizza |
+|---|
+| funghi (menu item) |
+| margherita (menu item) |
+| quattro formaggi (menu item) |
+
+## CQ5: How hot is each pizza on the menu?
+
+`cq5-spiciness.rq` - 5 row(s)
+
+| pizza | level |
+|---|---|
+| diavola (menu item) | hot |
+| funghi (menu item) | mild |
+| hawaiian (menu item) | mild |
+| margherita (menu item) | mild |
+| quattro formaggi (menu item) | mild |

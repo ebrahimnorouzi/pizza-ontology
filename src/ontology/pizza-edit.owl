@@ -7,8 +7,10 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
     <owl:Ontology rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl">
+        <owl:imports rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/classification_import.owl"/>
         <owl:imports rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/componency_import.owl"/>
         <dcterms:description xml:lang="en">A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
@@ -65,6 +67,12 @@
     
 
 
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"/>
+    
+
+
     <!-- http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent -->
 
     <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent"/>
@@ -103,6 +111,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept"/>
     
 
 
@@ -187,6 +201,16 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A named pizza topped with mozzarella, tomato, spicysalami.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">diavola</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory -->
+
+    <owl:Class rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept"/>
+        <obo:IAO_0000115 xml:lang="en">A concept a menu uses to say which diets a pizza suits.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">diet category</rdfs:label>
     </owl:Class>
     
 
@@ -461,6 +485,16 @@
     
 
 
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel -->
+
+    <owl:Class rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept"/>
+        <obo:IAO_0000115 xml:lang="en">A concept a menu uses to say how hot a pizza is.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">spiciness level</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza -->
 
     <owl:Class rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza">
@@ -543,10 +577,20 @@
     
 
 
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot -->
+
+    <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot">
+        <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel"/>
+        <rdfs:label xml:lang="en">hot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola -->
 
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola">
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola"/>
+        <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot"/>
         <hasBase rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami"/>
@@ -596,6 +640,8 @@
 
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi">
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi"/>
+        <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"/>
+        <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian"/>
         <hasBase rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom"/>
@@ -645,6 +691,7 @@
 
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian">
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian"/>
+        <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"/>
         <hasBase rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella"/>
@@ -704,6 +751,8 @@
 
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita">
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita"/>
+        <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"/>
+        <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian"/>
         <hasBase rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato"/>
@@ -743,6 +792,8 @@
 
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi">
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi"/>
+        <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"/>
+        <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian"/>
         <hasBase rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola"/>
@@ -804,6 +855,24 @@
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato">
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"/>
         <rdfs:label xml:lang="en">quattro formaggi tomato</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild -->
+
+    <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild">
+        <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel"/>
+        <rdfs:label xml:lang="en">mild</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian -->
+
+    <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian">
+        <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory"/>
+        <rdfs:label xml:lang="en">vegetarian</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
