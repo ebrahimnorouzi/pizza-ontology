@@ -53,3 +53,24 @@ Each query in this folder run against the released `pizza.owl` (reasoned with EL
 | hawaiian (menu item) | mild |
 | margherita (menu item) | mild |
 | quattro formaggi (menu item) | mild |
+
+## CQ6: How much does each pizza on the menu cost, and in which currency?
+
+`cq6-prices.rq` - 5 row(s)
+
+| pizza | amount | currency |
+|---|---|---|
+| diavola (menu item) | 10.50 | euro |
+| funghi (menu item) | 9.50 | euro |
+| hawaiian (menu item) | 10.00 | euro |
+| margherita (menu item) | 8.50 | euro |
+| quattro formaggi (menu item) | 11.00 | euro |
+
+## CQ7: Which pizzas cost less than 10 euros?
+
+`cq7-cheaper-than-10.rq` - 2 row(s)
+
+| pizza | amount |
+|---|---|
+| margherita (menu item) | 8.50 |
+| funghi (menu item) | 9.50 |

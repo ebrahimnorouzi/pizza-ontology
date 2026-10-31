@@ -7,11 +7,13 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:price="http://www.ontologydesignpatterns.org/cp/owl/price.owl#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:classification="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#">
     <owl:Ontology rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl">
         <owl:imports rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/classification_import.owl"/>
         <owl:imports rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/componency_import.owl"/>
+        <owl:imports rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/price_import.owl"/>
         <dcterms:description xml:lang="en">A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title xml:lang="en">Pizza Ontology</dcterms:title>
@@ -79,6 +81,18 @@
     
 
 
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice"/>
+    
+
+
     <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase -->
 
     <owl:ObjectProperty rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">
@@ -106,6 +120,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -123,6 +154,18 @@
     <!-- http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object -->
 
     <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price"/>
     
 
 
@@ -345,6 +388,16 @@
         <rdfs:subClassOf rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping"/>
         <obo:IAO_0000115 xml:lang="en">A pizza topping made of meat.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">meat topping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice -->
+
+    <owl:Class rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price"/>
+        <obo:IAO_0000115 xml:lang="en">The price a menu asks for a pizza.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">menu price</rdfs:label>
     </owl:Class>
     
 
@@ -577,6 +630,15 @@
     
 
 
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro -->
+
+    <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency"/>
+        <rdfs:label xml:lang="en">euro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot -->
 
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot">
@@ -591,6 +653,7 @@
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola">
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola"/>
         <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot"/>
+        <price:hasPrice rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price"/>
         <hasBase rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami"/>
@@ -614,6 +677,17 @@
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella">
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"/>
         <rdfs:label xml:lang="en">diavola mozzarella</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price -->
+
+    <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price">
+        <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice"/>
+        <price:hasCurrency rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro"/>
+        <price:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.50</price:hasValue>
+        <rdfs:label xml:lang="en">diavola price</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -642,6 +716,7 @@
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi"/>
         <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"/>
         <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian"/>
+        <price:hasPrice rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price"/>
         <hasBase rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom"/>
@@ -678,6 +753,17 @@
     
 
 
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price -->
+
+    <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price">
+        <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice"/>
+        <price:hasCurrency rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro"/>
+        <price:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.50</price:hasValue>
+        <rdfs:label xml:lang="en">funghi price</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato -->
 
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato">
@@ -692,6 +778,7 @@
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian">
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian"/>
         <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"/>
+        <price:hasPrice rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price"/>
         <hasBase rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella"/>
@@ -738,6 +825,17 @@
     
 
 
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price -->
+
+    <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price">
+        <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice"/>
+        <price:hasCurrency rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro"/>
+        <price:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.00</price:hasValue>
+        <rdfs:label xml:lang="en">hawaiian price</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato -->
 
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato">
@@ -753,6 +851,7 @@
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita"/>
         <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"/>
         <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian"/>
+        <price:hasPrice rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price"/>
         <hasBase rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato"/>
@@ -779,6 +878,17 @@
     
 
 
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price -->
+
+    <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price">
+        <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice"/>
+        <price:hasCurrency rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro"/>
+        <price:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.50</price:hasValue>
+        <rdfs:label xml:lang="en">margherita price</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato -->
 
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato">
@@ -794,6 +904,7 @@
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi"/>
         <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"/>
         <classification:isClassifiedBy rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian"/>
+        <price:hasPrice rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price"/>
         <hasBase rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina"/>
         <hasTopping rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola"/>
@@ -846,6 +957,17 @@
     <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan">
         <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping"/>
         <rdfs:label xml:lang="en">quattro formaggi parmesan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price -->
+
+    <owl:NamedIndividual rdf:about="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price">
+        <rdf:type rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice"/>
+        <price:hasCurrency rdf:resource="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro"/>
+        <price:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.00</price:hasValue>
+        <rdfs:label xml:lang="en">quattro formaggi price</rdfs:label>
     </owl:NamedIndividual>
     
 

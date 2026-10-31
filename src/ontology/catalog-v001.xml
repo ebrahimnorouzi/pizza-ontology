@@ -6,4 +6,5 @@
          those imports resolve from disk with no network. -->
     <uri id="User Entered Import Resolution" name="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/componency_import.owl" uri="imports/componency_import.owl"/>
     <uri id="User Entered Import Resolution" name="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/classification_import.owl" uri="imports/classification_import.owl"/>
+    <uri id="User Entered Import Resolution" name="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/price_import.owl" uri="imports/price_import.owl"/>
 </catalog>
