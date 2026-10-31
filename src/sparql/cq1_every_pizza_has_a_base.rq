@@ -1,0 +1,8 @@
+# CQ1 test: every pizza on the menu has a base. Lists the menu items without one.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pizza: <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>
+SELECT ?pizza WHERE {
+  ?pizza rdf:type/rdfs:subClassOf* pizza:Pizza .
+  FILTER NOT EXISTS { ?pizza pizza:hasBase ?base }
+}

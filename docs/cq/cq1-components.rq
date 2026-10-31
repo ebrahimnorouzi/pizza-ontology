@@ -1,0 +1,11 @@
+# CQ1: What are the base and the toppings of the Margherita on the menu?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pizza: <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>
+SELECT ?kind ?part WHERE {
+  { pizza:menu_margherita pizza:hasBase ?p . BIND("base" AS ?kind) }
+  UNION
+  { pizza:menu_margherita pizza:hasTopping ?p . BIND("topping" AS ?kind) }
+  ?p rdf:type ?type . ?type rdfs:label ?part .
+  FILTER (?type != <http://www.w3.org/2002/07/owl#NamedIndividual>)
+} ORDER BY ?kind ?part

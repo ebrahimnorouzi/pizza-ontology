@@ -1,0 +1,8 @@
+# CQ3: Which pizzas are spicy? Nobody asserted it: the reasoner puts them under SpicyPizza.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pizza: <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>
+SELECT ?pizza WHERE {
+  ?class rdfs:subClassOf+ pizza:SpicyPizza .
+  ?class rdfs:label ?pizza .
+} ORDER BY ?pizza
