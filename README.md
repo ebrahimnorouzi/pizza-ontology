@@ -110,10 +110,12 @@ Story S3, CQ6-CQ7.
 
 ### See the patterns on the board
 
-Open `src/ontology/pizza-edit.owl` - or the release, `pizza.owl` - go to the **OntoBoard** tab and
-press **Add all**. Componency, Classification and Price each arrive in a frame named after the
-pattern, and the pizza's own classes are laid out beside them, with an arrow to each pattern class
-they specialise. On a Mac, pinch to zoom.
+Open `src/ontology/pizza-edit.owl` - or the release, `pizza.owl` - and go to the **OntoBoard** tab.
+From OntoBoard 1.131.0 the board shows the whole ontology as soon as it opens: Componency,
+Classification and Price each in a frame named after the pattern along the top, the pizza's own
+classes as an outline below them - a class, then its subclasses, then its individuals - and the
+properties in frames of their own. Select a class to bring what it is connected to forward. With
+1.130.0, which built this repository, press **Add all** for the frames. On a Mac, pinch to zoom.
 
 ## Versioning
 
