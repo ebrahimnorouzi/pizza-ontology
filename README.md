@@ -12,6 +12,7 @@ a git tag, so you can check out any step and compare it with what you built.
 |---|---|
 | Ontology IRI | `https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl` |
 | Latest release | [`pizza.owl`](pizza.owl) (RDF/XML), [`pizza.ttl`](pizza.ttl) (Turtle), each version under [`releases/`](releases/) |
+| Documentation | [The ontology's documentation page](https://ebrahimnorouzi.github.io/pizza-ontology/ontology/index-en.html), written by *OntoBoard → Build and release → Documentation...* (Widoco); the [project site](https://ebrahimnorouzi.github.io/pizza-ontology/) |
 | Licence | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 | Built with | OntoBoard 1.130.0 - nothing else installed: no ROBOT, no ODK, no Docker |
 | Patterns | Componency, Classification, Price - from the ODP portal, bundled with OntoBoard |
@@ -29,6 +30,12 @@ another version may extract a slightly different module. With 1.130.0 the module
 in `src/ontology/imports/` come out as they are here, apart from the date each module records for
 its import (`dcterms:created`) and, in Protégé 5.6, two lines its newer OWL API writes: a
 declaration of `xsd:date`, and its own version in the closing comment.
+
+One file here is newer than that: `src/ontology/Makefile` is the one OntoBoard 1.134.2 generates
+(what *Project → Update project files...* writes), so that `make test` on GitHub runs the SPARQL
+checks over the imports as well, as *Build...* in Protégé does. *Build...* on this checkout
+therefore runs with OntoBoard 1.134.2; an earlier version says the Makefile is not the one it
+generates. The project you create in step 1 has the Makefile of the version you use.
 
 ## The steps
 
@@ -138,6 +145,8 @@ prices - and any of them opened in a window of its own.
 | `src/sparql/` | The CQ tests the build runs (`sparql_test`) |
 | `docs/xd/requirements.md` | User stories, CQs, reasoning requirements, pattern choices |
 | `docs/cq/` | One SPARQL query per CQ, and their answers |
+| `docs/ontology/` | The documentation page, as *Documentation...* wrote it; published with the site |
+| `docs/pizza.owl`, `docs/pizza/` | The latest release and every version, published under their IRIs |
 | `pizza.owl`, `pizza.ttl`, `releases/` | Releases: imports merged, reasoned with ELK |
 
 The same build runs without Protégé wherever `make` and [ROBOT](https://robot.obolibrary.org/)

@@ -1,0 +1,9 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza/1.0.0> a prov:Entity;
+	 dc:title "Pizza Ontology";
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasRevisionOf <https://ebrahimnorouzi.github.io/pizza-ontology/pizza/0.4.0>;
+.

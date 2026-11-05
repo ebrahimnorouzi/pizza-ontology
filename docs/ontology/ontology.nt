@@ -1,0 +1,724 @@
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl> <http://www.w3.org/2002/07/owl#versionIRI> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza/1.0.0> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl> <http://purl.org/dc/terms/description> "A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl> <http://purl.org/dc/terms/title> "Pizza Ontology"@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl> <http://www.w3.org/2000/01/rdf-schema#label> "Pizza Ontology"@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl> <http://www.w3.org/2002/07/owl#priorVersion> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza/0.4.0> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.obolibrary.org/obo/IAO_0000115
+<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> .
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity> .
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> <http://www.w3.org/2000/01/rdf-schema#label> "classifies" .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity> .
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> .
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isClassifiedBy" .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "The hasPart relation without transitivity, holding between an entity (the system) and another (the component), and assuming a design that structures the system. For an explicit pattern encoding design, see the 'designobject' pattern.\nThe componency pattern uses the transitive reduction logical pattern to preserve transitive on the superproperty from the partof pattern. In practice, the partof pattern acts here as the transitive reduction of the componency pattern." .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component"@en .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The hasPart relation without transitivity, holding between an entity (the system) and another (the component), and assuming a design that structures the system. For an explicit pattern encoding design, see the 'designobject' pattern.\nThe componency pattern uses the transitive reduction logical pattern to preserve transitive on the superproperty from the partof pattern. In practice, the partof pattern acts here as the transitive reduction of the componency pattern." .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is component of"@en .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> .
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "A transitive relation expressing parthood between any entities, e.g. 'the human body has a brain as part'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'." .
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/partof.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has part"@en .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A transitive relation expressing parthood between any entities, e.g. 'brain is a part of the human body'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'." .
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/partof.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is part of"@en .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/price.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "has currency"@en .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/price.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice> <http://www.w3.org/2000/01/rdf-schema#label> "has price"@en .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/price.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf> <http://www.w3.org/2000/01/rdf-schema#label> "is price of"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <http://www.w3.org/2000/01/rdf-schema#range> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates a pizza to the base it is built on."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <http://www.w3.org/2000/01/rdf-schema#label> "has base"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <http://www.w3.org/2000/01/rdf-schema#range> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "Relates a pizza to a topping on it."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <http://www.w3.org/2000/01/rdf-schema#label> "has topping"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/price.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Concept" .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity> <http://www.w3.org/2000/01/rdf-schema#label> "Entity" .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> <http://www.w3.org/2000/01/rdf-schema#comment> "Any physical, social, or mental object, or a substance" .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> <http://www.w3.org/2000/01/rdf-schema#label> "Object"@en .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency> <http://www.w3.org/2000/01/rdf-schema#comment> "A system of money in general use in a particular country." .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/price.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency> <http://www.w3.org/2000/01/rdf-schema#label> "Currency"@en .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of money expected, required, or given in payment for something." .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/price.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> <http://www.w3.org/2000/01/rdf-schema#label> "Price"@en .
+# 
+# http://www.w3.org/2002/07/owl#Thing
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping made of cheese."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping> <http://www.w3.org/2000/01/rdf-schema#label> "cheese topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza> <http://purl.obolibrary.org/obo/IAO_0000115> "Any pizza that has at least one cheese topping."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza> <http://www.w3.org/2000/01/rdf-schema#label> "cheesy pizza"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of chili pepper."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping> <http://www.w3.org/2000/01/rdf-schema#label> "chili pepper topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase> <http://purl.obolibrary.org/obo/IAO_0000115> "A thick pizza base baked in a pan."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase> <http://www.w3.org/2000/01/rdf-schema#label> "deep pan base"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola> <http://purl.obolibrary.org/obo/IAO_0000115> "A named pizza topped with mozzarella, tomato, spicysalami."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola> <http://www.w3.org/2000/01/rdf-schema#label> "diavola"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory> <http://purl.obolibrary.org/obo/IAO_0000115> "A concept a menu uses to say which diets a pizza suits."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory> <http://www.w3.org/2000/01/rdf-schema#label> "diet category"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of fontina."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping> <http://www.w3.org/2000/01/rdf-schema#label> "fontina topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping made of fruit."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping> <http://www.w3.org/2000/01/rdf-schema#label> "fruit topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi> <http://purl.obolibrary.org/obo/IAO_0000115> "A named pizza topped with mozzarella, tomato, mushroom."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi> <http://www.w3.org/2000/01/rdf-schema#label> "funghi"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of gorgonzola."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping> <http://www.w3.org/2000/01/rdf-schema#label> "gorgonzola topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of ham."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping> <http://www.w3.org/2000/01/rdf-schema#label> "ham topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian> <http://purl.obolibrary.org/obo/IAO_0000115> "A named pizza topped with mozzarella, tomato, ham, pineapple."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian> <http://www.w3.org/2000/01/rdf-schema#label> "hawaiian"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita> <http://purl.obolibrary.org/obo/IAO_0000115> "A named pizza topped with mozzarella, tomato."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita> <http://www.w3.org/2000/01/rdf-schema#label> "margherita"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping made of meat."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping> <http://www.w3.org/2000/01/rdf-schema#label> "meat topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice> <http://purl.obolibrary.org/obo/IAO_0000115> "The price a menu asks for a pizza."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice> <http://www.w3.org/2000/01/rdf-schema#label> "menu price"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of mozzarella."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> <http://www.w3.org/2000/01/rdf-schema#label> "mozzarella topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of mushroom."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping> <http://www.w3.org/2000/01/rdf-schema#label> "mushroom topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza that appears on a menu under a name."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza> <http://www.w3.org/2000/01/rdf-schema#label> "named pizza"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of olive."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping> <http://www.w3.org/2000/01/rdf-schema#label> "olive topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of parmesan."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping> <http://www.w3.org/2000/01/rdf-schema#label> "parmesan topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of pineapple."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping> <http://www.w3.org/2000/01/rdf-schema#label> "pineapple topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> <http://purl.obolibrary.org/obo/IAO_0000115> "An oven-baked flat bread with toppings."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> <http://www.w3.org/2000/01/rdf-schema#label> "pizza"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase> <http://purl.obolibrary.org/obo/IAO_0000115> "The dough a pizza is built on."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase> <http://www.w3.org/2000/01/rdf-schema#label> "pizza base"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "An ingredient put on a pizza base."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping> <http://www.w3.org/2000/01/rdf-schema#label> "pizza topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> <http://purl.obolibrary.org/obo/IAO_0000115> "A named pizza topped with mozzarella, parmesan, gorgonzola, fontina, tomato."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> <http://www.w3.org/2000/01/rdf-schema#label> "quattro formaggi"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel> <http://purl.obolibrary.org/obo/IAO_0000115> "A concept a menu uses to say how hot a pizza is."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel> <http://www.w3.org/2000/01/rdf-schema#label> "spiciness level"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid27 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza> <http://purl.obolibrary.org/obo/IAO_0000115> "Any pizza that has at least one spicy topping."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza> <http://www.w3.org/2000/01/rdf-schema#label> "spicy pizza"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of spicy salami."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping> <http://www.w3.org/2000/01/rdf-schema#label> "spicy salami topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A topping that makes a pizza hot."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping> <http://www.w3.org/2000/01/rdf-schema#label> "spicy topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza base rolled thin and baked crisp."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase> <http://www.w3.org/2000/01/rdf-schema#label> "thin and crispy base"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping of tomato."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> <http://www.w3.org/2000/01/rdf-schema#label> "tomato topping"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping> <http://purl.obolibrary.org/obo/IAO_0000115> "A pizza topping made of a vegetable."@en .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping> <http://www.w3.org/2000/01/rdf-schema#label> "vegetable topping"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro> <http://www.w3.org/2000/01/rdf-schema#label> "euro"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot> <http://www.w3.org/2000/01/rdf-schema#label> "hot"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola> <http://www.w3.org/2000/01/rdf-schema#label> "diavola (menu item)"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base> <http://www.w3.org/2000/01/rdf-schema#label> "diavola base"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella> <http://www.w3.org/2000/01/rdf-schema#label> "diavola mozzarella"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> "10.50"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price> <http://www.w3.org/2000/01/rdf-schema#label> "diavola price"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami> <http://www.w3.org/2000/01/rdf-schema#label> "diavola spicysalami"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato> <http://www.w3.org/2000/01/rdf-schema#label> "diavola tomato"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi> <http://www.w3.org/2000/01/rdf-schema#label> "funghi (menu item)"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base> <http://www.w3.org/2000/01/rdf-schema#label> "funghi base"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella> <http://www.w3.org/2000/01/rdf-schema#label> "funghi mozzarella"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom> <http://www.w3.org/2000/01/rdf-schema#label> "funghi mushroom"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> "9.50"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price> <http://www.w3.org/2000/01/rdf-schema#label> "funghi price"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato> <http://www.w3.org/2000/01/rdf-schema#label> "funghi tomato"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian> <http://www.w3.org/2000/01/rdf-schema#label> "hawaiian (menu item)"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base> <http://www.w3.org/2000/01/rdf-schema#label> "hawaiian base"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham> <http://www.w3.org/2000/01/rdf-schema#label> "hawaiian ham"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella> <http://www.w3.org/2000/01/rdf-schema#label> "hawaiian mozzarella"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple> <http://www.w3.org/2000/01/rdf-schema#label> "hawaiian pineapple"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> "10.00"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price> <http://www.w3.org/2000/01/rdf-schema#label> "hawaiian price"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato> <http://www.w3.org/2000/01/rdf-schema#label> "hawaiian tomato"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita> <http://www.w3.org/2000/01/rdf-schema#label> "margherita (menu item)"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base> <http://www.w3.org/2000/01/rdf-schema#label> "margherita base"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella> <http://www.w3.org/2000/01/rdf-schema#label> "margherita mozzarella"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> "8.50"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price> <http://www.w3.org/2000/01/rdf-schema#label> "margherita price"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato> <http://www.w3.org/2000/01/rdf-schema#label> "margherita tomato"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi> <http://www.w3.org/2000/01/rdf-schema#label> "quattro formaggi (menu item)"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base> <http://www.w3.org/2000/01/rdf-schema#label> "quattro formaggi base"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina> <http://www.w3.org/2000/01/rdf-schema#label> "quattro formaggi fontina"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola> <http://www.w3.org/2000/01/rdf-schema#label> "quattro formaggi gorgonzola"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella> <http://www.w3.org/2000/01/rdf-schema#label> "quattro formaggi mozzarella"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan> <http://www.w3.org/2000/01/rdf-schema#label> "quattro formaggi parmesan"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price> <http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue> "11.00"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price> <http://www.w3.org/2000/01/rdf-schema#label> "quattro formaggi price"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato> <http://www.w3.org/2000/01/rdf-schema#label> "quattro formaggi tomato"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild> <http://www.w3.org/2000/01/rdf-schema#label> "mild"@en .
+# 
+# https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory> .
+<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian> <http://www.w3.org/2000/01/rdf-schema#label> "vegetarian"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

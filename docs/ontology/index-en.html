@@ -1,0 +1,2431 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Pizza Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl","name":"Pizza Ontology", "headline":"Document describing the ontology https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl", "dateReleased":"Thu Nov 05 14:49:48 CET 2026", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/"}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Pizza Ontology</h1>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/1.0.0">https://ebrahimnorouzi.github.io/pizza-ontology/pizza/1.0.0</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/0.4.0">https://ebrahimnorouzi.github.io/pizza-ontology/pizza/0.4.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd> Pizza Ontology. Revision: 1.0.0. Retrieved from: https://ebrahimnorouzi.github.io/pizza-ontology/pizza/1.0.0</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Pizza Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#CheeseTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping">cheese topping</a>
+   </li>
+   <li>
+      <a href="#CheesyPizza"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza">cheesy pizza</a>
+   </li>
+   <li>
+      <a href="#ChiliPepperTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping">chili pepper topping</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept"
+         title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept">Concept</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency"
+         title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency">Currency</a>
+   </li>
+   <li>
+      <a href="#DeepPanBase"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase">deep pan base</a>
+   </li>
+   <li>
+      <a href="#Diavola"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola">diavola</a>
+   </li>
+   <li>
+      <a href="#DietCategory"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory">diet category</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity"
+         title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity">Entity</a>
+   </li>
+   <li>
+      <a href="#FontinaTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping">fontina topping</a>
+   </li>
+   <li>
+      <a href="#FruitTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping">fruit topping</a>
+   </li>
+   <li>
+      <a href="#Funghi"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi">funghi</a>
+   </li>
+   <li>
+      <a href="#GorgonzolaTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping">gorgonzola topping</a>
+   </li>
+   <li>
+      <a href="#HamTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping">ham topping</a>
+   </li>
+   <li>
+      <a href="#Hawaiian"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian">hawaiian</a>
+   </li>
+   <li>
+      <a href="#Margherita"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita">margherita</a>
+   </li>
+   <li>
+      <a href="#MeatTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping">meat topping</a>
+   </li>
+   <li>
+      <a href="#MenuPrice"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice">menu price</a>
+   </li>
+   <li>
+      <a href="#MozzarellaTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping">mozzarella topping</a>
+   </li>
+   <li>
+      <a href="#MushroomTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping">mushroom topping</a>
+   </li>
+   <li>
+      <a href="#NamedPizza"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza">named pizza</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object"
+         title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object">Object</a>
+   </li>
+   <li>
+      <a href="#OliveTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping">olive topping</a>
+   </li>
+   <li>
+      <a href="#ParmesanTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping">parmesan topping</a>
+   </li>
+   <li>
+      <a href="#PineappleTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping">pineapple topping</a>
+   </li>
+   <li>
+      <a href="#Pizza"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza">pizza</a>
+   </li>
+   <li>
+      <a href="#PizzaBase"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase">pizza base</a>
+   </li>
+   <li>
+      <a href="#PizzaTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping">pizza topping</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price"
+         title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price">Price</a>
+   </li>
+   <li>
+      <a href="#QuattroFormaggi"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi">quattro formaggi</a>
+   </li>
+   <li>
+      <a href="#SpicinessLevel"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel">spiciness level</a>
+   </li>
+   <li>
+      <a href="#SpicyPizza"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza">spicy pizza</a>
+   </li>
+   <li>
+      <a href="#SpicySalamiTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping">spicy salami topping</a>
+   </li>
+   <li>
+      <a href="#SpicyTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping">spicy topping</a>
+   </li>
+   <li>
+      <a href="#ThinAndCrispyBase"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase">thin and crispy base</a>
+   </li>
+   <li>
+      <a href="#TomatoTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping">tomato topping</a>
+   </li>
+   <li>
+      <a href="#VegetableTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping">vegetable topping</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies"
+         title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies">classifies</a>
+   </li>
+   <li>
+      <a href="#hasBase"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">has base</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent"
+         title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent">has component</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency"
+         title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency">has currency</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"
+         title="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart">has part</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice"
+         title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice">has price</a>
+   </li>
+   <li>
+      <a href="#hasTopping"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf"
+         title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf">is component of</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"
+         title="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf">is part of</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf"
+         title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf">is price of</a>
+   </li>
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"
+         title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue"
+         title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue">has value</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.obolibrary.org/obo/IAO_0000115" title="http://purl.obolibrary.org/obo/IAO_0000115">
+         <span>I A O 0000115</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#menu_diavola"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola">diavola (menu item)</a>
+   </li>
+   <li>
+      <a href="#menu_diavola_base"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base">diavola base</a>
+   </li>
+   <li>
+      <a href="#menu_diavola_mozzarella"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella">diavola mozzarella</a>
+   </li>
+   <li>
+      <a href="#menu_diavola_price"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price">diavola price</a>
+   </li>
+   <li>
+      <a href="#menu_diavola_spicysalami"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami">diavola spicysalami</a>
+   </li>
+   <li>
+      <a href="#menu_diavola_tomato"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato">diavola tomato</a>
+   </li>
+   <li>
+      <a href="#euro"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro">euro</a>
+   </li>
+   <li>
+      <a href="#menu_funghi"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi">funghi (menu item)</a>
+   </li>
+   <li>
+      <a href="#menu_funghi_base"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base">funghi base</a>
+   </li>
+   <li>
+      <a href="#menu_funghi_mozzarella"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella">funghi mozzarella</a>
+   </li>
+   <li>
+      <a href="#menu_funghi_mushroom"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom">funghi mushroom</a>
+   </li>
+   <li>
+      <a href="#menu_funghi_price"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price">funghi price</a>
+   </li>
+   <li>
+      <a href="#menu_funghi_tomato"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato">funghi tomato</a>
+   </li>
+   <li>
+      <a href="#menu_hawaiian"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian">hawaiian (menu item)</a>
+   </li>
+   <li>
+      <a href="#menu_hawaiian_base"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base">hawaiian base</a>
+   </li>
+   <li>
+      <a href="#menu_hawaiian_ham"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham">hawaiian ham</a>
+   </li>
+   <li>
+      <a href="#menu_hawaiian_mozzarella"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella">hawaiian mozzarella</a>
+   </li>
+   <li>
+      <a href="#menu_hawaiian_pineapple"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple">hawaiian pineapple</a>
+   </li>
+   <li>
+      <a href="#menu_hawaiian_price"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price">hawaiian price</a>
+   </li>
+   <li>
+      <a href="#menu_hawaiian_tomato"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato">hawaiian tomato</a>
+   </li>
+   <li>
+      <a href="#hot"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot">hot</a>
+   </li>
+   <li>
+      <a href="#menu_margherita"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita">margherita (menu item)</a>
+   </li>
+   <li>
+      <a href="#menu_margherita_base"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base">margherita base</a>
+   </li>
+   <li>
+      <a href="#menu_margherita_mozzarella"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella">margherita mozzarella</a>
+   </li>
+   <li>
+      <a href="#menu_margherita_price"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price">margherita price</a>
+   </li>
+   <li>
+      <a href="#menu_margherita_tomato"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato">margherita tomato</a>
+   </li>
+   <li>
+      <a href="#mild"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild">mild</a>
+   </li>
+   <li>
+      <a href="#menu_quattro_formaggi"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi">quattro formaggi (menu item)</a>
+   </li>
+   <li>
+      <a href="#menu_quattro_formaggi_base"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base">quattro formaggi base</a>
+   </li>
+   <li>
+      <a href="#menu_quattro_formaggi_fontina"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina">quattro formaggi fontina</a>
+   </li>
+   <li>
+      <a href="#menu_quattro_formaggi_gorgonzola"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola">quattro formaggi gorgonzola</a>
+   </li>
+   <li>
+      <a href="#menu_quattro_formaggi_mozzarella"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella">quattro formaggi mozzarella</a>
+   </li>
+   <li>
+      <a href="#menu_quattro_formaggi_parmesan"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan">quattro formaggi parmesan</a>
+   </li>
+   <li>
+      <a href="#menu_quattro_formaggi_price"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price">quattro formaggi price</a>
+   </li>
+   <li>
+      <a href="#menu_quattro_formaggi_tomato"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato">quattro formaggi tomato</a>
+   </li>
+   <li>
+      <a href="#vegetarian"
+         title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian">vegetarian</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Pizza Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Pizza Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Pizza Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#CheeseTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping">cheese topping</a></li>
+  <li><a href="#CheesyPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza">cheesy pizza</a></li>
+  <li><a href="#ChiliPepperTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping">chili pepper topping</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept">Concept</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency">Currency</a></li>
+  <li><a href="#DeepPanBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase">deep pan base</a></li>
+  <li><a href="#Diavola" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola">diavola</a></li>
+  <li><a href="#DietCategory" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory">diet category</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity">Entity</a></li>
+  <li><a href="#FontinaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping">fontina topping</a></li>
+  <li><a href="#FruitTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping">fruit topping</a></li>
+  <li><a href="#Funghi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi">funghi</a></li>
+  <li><a href="#GorgonzolaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping">gorgonzola topping</a></li>
+  <li><a href="#HamTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping">ham topping</a></li>
+  <li><a href="#Hawaiian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian">hawaiian</a></li>
+  <li><a href="#Margherita" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita">margherita</a></li>
+  <li><a href="#MeatTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping">meat topping</a></li>
+  <li><a href="#MenuPrice" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice">menu price</a></li>
+  <li><a href="#MozzarellaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping">mozzarella topping</a></li>
+  <li><a href="#MushroomTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping">mushroom topping</a></li>
+  <li><a href="#NamedPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza">named pizza</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object">Object</a></li>
+  <li><a href="#OliveTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping">olive topping</a></li>
+  <li><a href="#ParmesanTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping">parmesan topping</a></li>
+  <li><a href="#PineappleTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping">pineapple topping</a></li>
+  <li><a href="#Pizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza">pizza</a></li>
+  <li><a href="#PizzaBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase">pizza base</a></li>
+  <li><a href="#PizzaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping">pizza topping</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price">Price</a></li>
+  <li><a href="#QuattroFormaggi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi">quattro formaggi</a></li>
+  <li><a href="#SpicinessLevel" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel">spiciness level</a></li>
+  <li><a href="#SpicyPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza">spicy pizza</a></li>
+  <li><a href="#SpicySalamiTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping">spicy salami topping</a></li>
+  <li><a href="#SpicyTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping">spicy topping</a></li>
+  <li><a href="#ThinAndCrispyBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase">thin and crispy base</a></li>
+  <li><a href="#TomatoTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping">tomato topping</a></li>
+  <li><a href="#VegetableTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping">vegetable topping</a></li>
+ </ul>
+ <div class="entity" id="CheeseTopping">
+  <h3>cheese topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping made of cheese.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PizzaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping">pizza topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FontinaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping">fontina topping</a> <sup class="type-c" title="class">c</sup>, <a href="#GorgonzolaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping">gorgonzola topping</a> <sup class="type-c" title="class">c</sup>, <a href="#MozzarellaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping">mozzarella topping</a> <sup class="type-c" title="class">c</sup>, <a href="#ParmesanTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping">parmesan topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CheesyPizza">
+  <h3>cheesy pizza<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza</p>
+  <div class="comment">
+   <span class="markdown">Any pizza that has at least one cheese topping.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#Pizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza">pizza</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#CheeseTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping">cheese topping</a> <sup class="type-c" title="class">c</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Pizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza">pizza</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Diavola" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola">diavola</a> <sup class="type-c" title="class">c</sup>, <a href="#Funghi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi">funghi</a> <sup class="type-c" title="class">c</sup>, <a href="#Hawaiian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian">hawaiian</a> <sup class="type-c" title="class">c</sup>, <a href="#Margherita" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita">margherita</a> <sup class="type-c" title="class">c</sup>, <a href="#QuattroFormaggi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi">quattro formaggi</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ChiliPepperTopping">
+  <h3>chili pepper topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of chili pepper.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SpicyTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping">spicy topping</a> <sup class="type-c" title="class">c</sup>, <a href="#VegetableTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping">vegetable topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept">
+  <h3>Concept<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DietCategory" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory">diet category</a> <sup class="type-c" title="class">c</sup>, <a href="#SpicinessLevel" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel">spiciness level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies">classifies</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency">
+  <h3>Currency<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency</p>
+  <div class="comment">
+   <span class="markdown">A system of money in general use in a particular country.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/price.owl">http://www.ontologydesignpatterns.org/cp/owl/price.owl</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency">has currency</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#euro" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro">euro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price">Price</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DeepPanBase">
+  <h3>deep pan base<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase</p>
+  <div class="comment">
+   <span class="markdown">A thick pizza base baked in a pan.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PizzaBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase">pizza base</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_funghi_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base">funghi base</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Diavola">
+  <h3>diavola<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola</p>
+  <div class="comment">
+   <span class="markdown">A named pizza topped with mozzarella, tomato, spicysalami.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CheesyPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza">cheesy pizza</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza">named pizza</a> <sup class="type-c" title="class">c</sup>, <a href="#SpicyPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza">spicy pizza</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_diavola" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola">diavola (menu item)</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DietCategory">
+  <h3>diet category<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory</p>
+  <div class="comment">
+   <span class="markdown">A concept a menu uses to say which diets a pizza suits.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#vegetarian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian">vegetarian</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity">
+  <h3>Entity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity</p>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies">classifies</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FontinaTopping">
+  <h3>fontina topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of fontina.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CheeseTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping">cheese topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_quattro_formaggi_fontina" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina">quattro formaggi fontina</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FruitTopping">
+  <h3>fruit topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping made of fruit.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PizzaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping">pizza topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#PineappleTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping">pineapple topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Funghi">
+  <h3>funghi<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi</p>
+  <div class="comment">
+   <span class="markdown">A named pizza topped with mozzarella, tomato, mushroom.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CheesyPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza">cheesy pizza</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza">named pizza</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_funghi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi">funghi (menu item)</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GorgonzolaTopping">
+  <h3>gorgonzola topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of gorgonzola.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CheeseTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping">cheese topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_quattro_formaggi_gorgonzola" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola">quattro formaggi gorgonzola</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HamTopping">
+  <h3>ham topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of ham.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MeatTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping">meat topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_hawaiian_ham" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham">hawaiian ham</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Hawaiian">
+  <h3>hawaiian<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian</p>
+  <div class="comment">
+   <span class="markdown">A named pizza topped with mozzarella, tomato, ham, pineapple.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CheesyPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza">cheesy pizza</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza">named pizza</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_hawaiian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian">hawaiian (menu item)</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Margherita">
+  <h3>margherita<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita</p>
+  <div class="comment">
+   <span class="markdown">A named pizza topped with mozzarella, tomato.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CheesyPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza">cheesy pizza</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza">named pizza</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_margherita" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita">margherita (menu item)</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MeatTopping">
+  <h3>meat topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping made of meat.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PizzaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping">pizza topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#HamTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping">ham topping</a> <sup class="type-c" title="class">c</sup>, <a href="#SpicySalamiTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping">spicy salami topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MenuPrice">
+  <h3>menu price<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice</p>
+  <div class="comment">
+   <span class="markdown">The price a menu asks for a pizza.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price">Price</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_diavola_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price">diavola price</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_funghi_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price">funghi price</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_hawaiian_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price">hawaiian price</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_margherita_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price">margherita price</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_quattro_formaggi_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price">quattro formaggi price</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MozzarellaTopping">
+  <h3>mozzarella topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of mozzarella.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CheeseTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping">cheese topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_diavola_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella">diavola mozzarella</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_funghi_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella">funghi mozzarella</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_hawaiian_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella">hawaiian mozzarella</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_margherita_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella">margherita mozzarella</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_quattro_formaggi_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella">quattro formaggi mozzarella</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MushroomTopping">
+  <h3>mushroom topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of mushroom.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VegetableTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping">vegetable topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_funghi_mushroom" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom">funghi mushroom</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NamedPizza">
+  <h3>named pizza<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza</p>
+  <div class="comment">
+   <span class="markdown">A pizza that appears on a menu under a name.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Pizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza">pizza</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Diavola" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola">diavola</a> <sup class="type-c" title="class">c</sup>, <a href="#Funghi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi">funghi</a> <sup class="type-c" title="class">c</sup>, <a href="#Hawaiian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian">hawaiian</a> <sup class="type-c" title="class">c</sup>, <a href="#Margherita" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita">margherita</a> <sup class="type-c" title="class">c</sup>, <a href="#QuattroFormaggi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi">quattro formaggi</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object">
+  <h3>Object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object</p>
+  <div class="comment">
+   <span class="markdown">Any physical, social, or mental object, or a substance</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/componency.owl">http://www.ontologydesignpatterns.org/cp/owl/componency.owl</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Pizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza">pizza</a> <sup class="type-c" title="class">c</sup>, <a href="#PizzaBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase">pizza base</a> <sup class="type-c" title="class">c</sup>, <a href="#PizzaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping">pizza topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OliveTopping">
+  <h3>olive topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of olive.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VegetableTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping">vegetable topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ParmesanTopping">
+  <h3>parmesan topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of parmesan.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CheeseTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping">cheese topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_quattro_formaggi_parmesan" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan">quattro formaggi parmesan</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PineappleTopping">
+  <h3>pineapple topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of pineapple.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FruitTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping">fruit topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_hawaiian_pineapple" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple">hawaiian pineapple</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Pizza">
+  <h3>pizza<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza</p>
+  <div class="comment">
+   <span class="markdown">An oven-baked flat bread with toppings.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object">Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CheesyPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza">cheesy pizza</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza">named pizza</a> <sup class="type-c" title="class">c</sup>, <a href="#SpicyPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza">spicy pizza</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">has base</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PizzaBase">
+  <h3>pizza base<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase</p>
+  <div class="comment">
+   <span class="markdown">The dough a pizza is built on.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object">Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DeepPanBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase">deep pan base</a> <sup class="type-c" title="class">c</sup>, <a href="#ThinAndCrispyBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase">thin and crispy base</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">has base</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PizzaTopping">
+  <h3>pizza topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping</p>
+  <div class="comment">
+   <span class="markdown">An ingredient put on a pizza base.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object">Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CheeseTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping">cheese topping</a> <sup class="type-c" title="class">c</sup>, <a href="#FruitTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping">fruit topping</a> <sup class="type-c" title="class">c</sup>, <a href="#MeatTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping">meat topping</a> <sup class="type-c" title="class">c</sup>, <a href="#SpicyTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping">spicy topping</a> <sup class="type-c" title="class">c</sup>, <a href="#VegetableTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping">vegetable topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price">
+  <h3>Price<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price</p>
+  <div class="comment">
+   <span class="markdown">The amount of money expected, required, or given in payment for something.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/price.owl">http://www.ontologydesignpatterns.org/cp/owl/price.owl</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#MenuPrice" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice">menu price</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency">has currency</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf">is price of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice">has price</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency">Currency</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="QuattroFormaggi">
+  <h3>quattro formaggi<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi</p>
+  <div class="comment">
+   <span class="markdown">A named pizza topped with mozzarella, parmesan, gorgonzola, fontina, tomato.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CheesyPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza">cheesy pizza</a> <sup class="type-c" title="class">c</sup>, <a href="#NamedPizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza">named pizza</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_quattro_formaggi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi">quattro formaggi (menu item)</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpicinessLevel">
+  <h3>spiciness level<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel</p>
+  <div class="comment">
+   <span class="markdown">A concept a menu uses to say how hot a pizza is.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#hot" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot">hot</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#mild" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild">mild</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpicyPizza">
+  <h3>spicy pizza<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza</p>
+  <div class="comment">
+   <span class="markdown">Any pizza that has at least one spicy topping.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#Pizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza">pizza</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#SpicyTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping">spicy topping</a> <sup class="type-c" title="class">c</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Pizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza">pizza</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Diavola" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola">diavola</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpicySalamiTopping">
+  <h3>spicy salami topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of spicy salami.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MeatTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping">meat topping</a> <sup class="type-c" title="class">c</sup>, <a href="#SpicyTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping">spicy topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_diavola_spicysalami" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami">diavola spicysalami</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SpicyTopping">
+  <h3>spicy topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping</p>
+  <div class="comment">
+   <span class="markdown">A topping that makes a pizza hot.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PizzaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping">pizza topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ChiliPepperTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping">chili pepper topping</a> <sup class="type-c" title="class">c</sup>, <a href="#SpicySalamiTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping">spicy salami topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ThinAndCrispyBase">
+  <h3>thin and crispy base<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase</p>
+  <div class="comment">
+   <span class="markdown">A pizza base rolled thin and baked crisp.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PizzaBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase">pizza base</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_diavola_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base">diavola base</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_hawaiian_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base">hawaiian base</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_margherita_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base">margherita base</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_quattro_formaggi_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base">quattro formaggi base</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TomatoTopping">
+  <h3>tomato topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping of tomato.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VegetableTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping">vegetable topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#menu_diavola_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato">diavola tomato</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_funghi_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato">funghi tomato</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_hawaiian_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato">hawaiian tomato</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_margherita_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato">margherita tomato</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#menu_quattro_formaggi_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato">quattro formaggi tomato</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VegetableTopping">
+  <h3>vegetable topping<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping</p>
+  <div class="comment">
+   <span class="markdown">A pizza topping made of a vegetable.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PizzaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping">pizza topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ChiliPepperTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping">chili pepper topping</a> <sup class="type-c" title="class">c</sup>, <a href="#MushroomTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping">mushroom topping</a> <sup class="type-c" title="class">c</sup>, <a href="#OliveTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping">olive topping</a> <sup class="type-c" title="class">c</sup>, <a href="#TomatoTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping">tomato topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies">classifies</a></li>
+  <li><a href="#hasBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">has base</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent">has component</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency">has currency</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart" title="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart">has part</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice">has price</a></li>
+  <li><a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf">is component of</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf" title="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf">is part of</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf">is price of</a></li>
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a></li>
+ </ul>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies">
+  <h3>classifies<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasBase">
+  <h3>has base<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase</p>
+  <div class="comment">
+   <span class="markdown">Relates a pizza to the base it is built on.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent">has component</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Pizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza">pizza</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PizzaBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase">pizza base</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent">
+  <h3>has component<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent</p>
+  <div class="comment">
+   <span class="markdown">The hasPart relation without transitivity, holding between an entity (the system) and another (the component), and assuming a design that structures the system. For an explicit pattern encoding design, see the 'designobject' pattern. The componency pattern uses the transitive reduction logical pattern to preserve transitive on the superproperty from the partof pattern. In practice, the partof pattern acts here as the transitive reduction of the componency pattern.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/componency.owl">http://www.ontologydesignpatterns.org/cp/owl/componency.owl</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart" title="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart">has part</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#hasBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">has base</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf">is component of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency">
+  <h3>has currency<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/price.owl">http://www.ontologydesignpatterns.org/cp/owl/price.owl</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price">Price</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency">Currency</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart">
+  <h3>has part<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart</p>
+  <div class="comment">
+   <span class="markdown">A transitive relation expressing parthood between any entities, e.g. 'the human body has a brain as part'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/partof.owl">http://www.ontologydesignpatterns.org/cp/owl/partof.owl</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent">has component</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf" title="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf">is part of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice">
+  <h3>has price<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/price.owl">http://www.ontologydesignpatterns.org/cp/owl/price.owl</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price">Price</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf">is price of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTopping">
+  <h3>has topping<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping</p>
+  <div class="comment">
+   <span class="markdown">Relates a pizza to a topping on it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent">has component</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Pizza" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza">pizza</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PizzaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping">pizza topping</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf">
+  <h3>is component of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf</p>
+  <div class="comment">
+   <span class="markdown">The hasPart relation without transitivity, holding between an entity (the system) and another (the component), and assuming a design that structures the system. For an explicit pattern encoding design, see the 'designobject' pattern. The componency pattern uses the transitive reduction logical pattern to preserve transitive on the superproperty from the partof pattern. In practice, the partof pattern acts here as the transitive reduction of the componency pattern.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/componency.owl">http://www.ontologydesignpatterns.org/cp/owl/componency.owl</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf" title="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf">is part of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent">has component</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf">
+  <h3>is part of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf</p>
+  <div class="comment">
+   <span class="markdown">A transitive relation expressing parthood between any entities, e.g. 'brain is a part of the human body'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/partof.owl">http://www.ontologydesignpatterns.org/cp/owl/partof.owl</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf" title="http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf">is component of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart" title="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart">has part</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf">
+  <h3>is price of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/price.owl">http://www.ontologydesignpatterns.org/cp/owl/price.owl</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price">Price</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice">has price</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">
+  <h3>isClassifiedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue">has value</a></li>
+ </ul>
+ <div class="entity" id="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue">
+  <h3>has value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.ontologydesignpatterns.org/cp/owl/price.owl">http://www.ontologydesignpatterns.org/cp/owl/price.owl</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price">Price</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://purl.obolibrary.org/obo/IAO_0000115" title="http://purl.obolibrary.org/obo/IAO_0000115"> <span>I A O 0000115</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source"> <span>source</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://purl.obolibrary.org/obo/IAO_0000115">
+  <h3>I A O 0000115<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.obolibrary.org/obo/IAO_0000115</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/source">
+  <h3>source<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/source</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#menu_diavola" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola">diavola (menu item)</a></li>
+  <li><a href="#menu_diavola_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base">diavola base</a></li>
+  <li><a href="#menu_diavola_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella">diavola mozzarella</a></li>
+  <li><a href="#menu_diavola_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price">diavola price</a></li>
+  <li><a href="#menu_diavola_spicysalami" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami">diavola spicysalami</a></li>
+  <li><a href="#menu_diavola_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato">diavola tomato</a></li>
+  <li><a href="#euro" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro">euro</a></li>
+  <li><a href="#menu_funghi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi">funghi (menu item)</a></li>
+  <li><a href="#menu_funghi_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base">funghi base</a></li>
+  <li><a href="#menu_funghi_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella">funghi mozzarella</a></li>
+  <li><a href="#menu_funghi_mushroom" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom">funghi mushroom</a></li>
+  <li><a href="#menu_funghi_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price">funghi price</a></li>
+  <li><a href="#menu_funghi_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato">funghi tomato</a></li>
+  <li><a href="#menu_hawaiian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian">hawaiian (menu item)</a></li>
+  <li><a href="#menu_hawaiian_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base">hawaiian base</a></li>
+  <li><a href="#menu_hawaiian_ham" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham">hawaiian ham</a></li>
+  <li><a href="#menu_hawaiian_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella">hawaiian mozzarella</a></li>
+  <li><a href="#menu_hawaiian_pineapple" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple">hawaiian pineapple</a></li>
+  <li><a href="#menu_hawaiian_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price">hawaiian price</a></li>
+  <li><a href="#menu_hawaiian_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato">hawaiian tomato</a></li>
+  <li><a href="#hot" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot">hot</a></li>
+  <li><a href="#menu_margherita" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita">margherita (menu item)</a></li>
+  <li><a href="#menu_margherita_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base">margherita base</a></li>
+  <li><a href="#menu_margherita_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella">margherita mozzarella</a></li>
+  <li><a href="#menu_margherita_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price">margherita price</a></li>
+  <li><a href="#menu_margherita_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato">margherita tomato</a></li>
+  <li><a href="#mild" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild">mild</a></li>
+  <li><a href="#menu_quattro_formaggi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi">quattro formaggi (menu item)</a></li>
+  <li><a href="#menu_quattro_formaggi_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base">quattro formaggi base</a></li>
+  <li><a href="#menu_quattro_formaggi_fontina" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina">quattro formaggi fontina</a></li>
+  <li><a href="#menu_quattro_formaggi_gorgonzola" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola">quattro formaggi gorgonzola</a></li>
+  <li><a href="#menu_quattro_formaggi_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella">quattro formaggi mozzarella</a></li>
+  <li><a href="#menu_quattro_formaggi_parmesan" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan">quattro formaggi parmesan</a></li>
+  <li><a href="#menu_quattro_formaggi_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price">quattro formaggi price</a></li>
+  <li><a href="#menu_quattro_formaggi_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato">quattro formaggi tomato</a></li>
+  <li><a href="#vegetarian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian">vegetarian</a></li>
+ </ul>
+ <div class="entity" id="menu_diavola">
+  <h3>diavola (menu item)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Diavola" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola">diavola</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#hot" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot">hot</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice">has price</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_diavola_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price">diavola price</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">has base</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_diavola_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base">diavola base</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_diavola_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella">diavola mozzarella</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_diavola_spicysalami" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami">diavola spicysalami</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_diavola_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato">diavola tomato</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_diavola_base">
+  <h3>diavola base<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ThinAndCrispyBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase">thin and crispy base</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_diavola_mozzarella">
+  <h3>diavola mozzarella<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MozzarellaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping">mozzarella topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_diavola_price">
+  <h3>diavola price<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MenuPrice" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice">menu price</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency">has currency</a> <sup class="type-op" title="object property">op</sup> <a href="#euro" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro">euro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"10.50"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_diavola_spicysalami">
+  <h3>diavola spicysalami<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#SpicySalamiTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping">spicy salami topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_diavola_tomato">
+  <h3>diavola tomato<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#TomatoTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping">tomato topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="euro">
+  <h3>euro<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency">Currency</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_funghi">
+  <h3>funghi (menu item)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Funghi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi">funghi</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#mild" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild">mild</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#vegetarian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian">vegetarian</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice">has price</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_funghi_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price">funghi price</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">has base</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_funghi_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base">funghi base</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_funghi_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella">funghi mozzarella</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_funghi_mushroom" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom">funghi mushroom</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_funghi_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato">funghi tomato</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_funghi_base">
+  <h3>funghi base<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#DeepPanBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase">deep pan base</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_funghi_mozzarella">
+  <h3>funghi mozzarella<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MozzarellaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping">mozzarella topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_funghi_mushroom">
+  <h3>funghi mushroom<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MushroomTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping">mushroom topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_funghi_price">
+  <h3>funghi price<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MenuPrice" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice">menu price</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency">has currency</a> <sup class="type-op" title="object property">op</sup> <a href="#euro" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro">euro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"9.50"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_funghi_tomato">
+  <h3>funghi tomato<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#TomatoTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping">tomato topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_hawaiian">
+  <h3>hawaiian (menu item)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Hawaiian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian">hawaiian</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#mild" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild">mild</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice">has price</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_hawaiian_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price">hawaiian price</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">has base</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_hawaiian_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base">hawaiian base</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_hawaiian_ham" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham">hawaiian ham</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_hawaiian_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella">hawaiian mozzarella</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_hawaiian_pineapple" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple">hawaiian pineapple</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_hawaiian_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato">hawaiian tomato</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_hawaiian_base">
+  <h3>hawaiian base<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ThinAndCrispyBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase">thin and crispy base</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_hawaiian_ham">
+  <h3>hawaiian ham<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#HamTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping">ham topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_hawaiian_mozzarella">
+  <h3>hawaiian mozzarella<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MozzarellaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping">mozzarella topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_hawaiian_pineapple">
+  <h3>hawaiian pineapple<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#PineappleTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping">pineapple topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_hawaiian_price">
+  <h3>hawaiian price<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MenuPrice" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice">menu price</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency">has currency</a> <sup class="type-op" title="object property">op</sup> <a href="#euro" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro">euro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"10.00"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_hawaiian_tomato">
+  <h3>hawaiian tomato<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#TomatoTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping">tomato topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="hot">
+  <h3>hot<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#SpicinessLevel" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel">spiciness level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_margherita">
+  <h3>margherita (menu item)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Margherita" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita">margherita</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#mild" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild">mild</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#vegetarian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian">vegetarian</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice">has price</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_margherita_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price">margherita price</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">has base</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_margherita_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base">margherita base</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_margherita_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella">margherita mozzarella</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_margherita_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato">margherita tomato</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_margherita_base">
+  <h3>margherita base<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ThinAndCrispyBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase">thin and crispy base</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_margherita_mozzarella">
+  <h3>margherita mozzarella<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MozzarellaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping">mozzarella topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_margherita_price">
+  <h3>margherita price<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MenuPrice" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice">menu price</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency">has currency</a> <sup class="type-op" title="object property">op</sup> <a href="#euro" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro">euro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"8.50"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_margherita_tomato">
+  <h3>margherita tomato<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#TomatoTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping">tomato topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="mild">
+  <h3>mild<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#SpicinessLevel" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel">spiciness level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_quattro_formaggi">
+  <h3>quattro formaggi (menu item)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#QuattroFormaggi" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi">quattro formaggi</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#mild" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild">mild</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" title="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">isClassifiedBy</a> <sup class="type-op" title="object property">op</sup> <a href="#vegetarian" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian">vegetarian</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice">has price</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_quattro_formaggi_price" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price">quattro formaggi price</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase">has base</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_quattro_formaggi_base" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base">quattro formaggi base</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_quattro_formaggi_fontina" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina">quattro formaggi fontina</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_quattro_formaggi_gorgonzola" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola">quattro formaggi gorgonzola</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_quattro_formaggi_mozzarella" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella">quattro formaggi mozzarella</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_quattro_formaggi_parmesan" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan">quattro formaggi parmesan</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping">has topping</a> <sup class="type-op" title="object property">op</sup> <a href="#menu_quattro_formaggi_tomato" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato">quattro formaggi tomato</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_quattro_formaggi_base">
+  <h3>quattro formaggi base<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ThinAndCrispyBase" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase">thin and crispy base</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_quattro_formaggi_fontina">
+  <h3>quattro formaggi fontina<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#FontinaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping">fontina topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_quattro_formaggi_gorgonzola">
+  <h3>quattro formaggi gorgonzola<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#GorgonzolaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping">gorgonzola topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_quattro_formaggi_mozzarella">
+  <h3>quattro formaggi mozzarella<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MozzarellaTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping">mozzarella topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_quattro_formaggi_parmesan">
+  <h3>quattro formaggi parmesan<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ParmesanTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping">parmesan topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_quattro_formaggi_price">
+  <h3>quattro formaggi price<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MenuPrice" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice">menu price</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency">has currency</a> <sup class="type-op" title="object property">op</sup> <a href="#euro" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro">euro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" title="http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"11.00"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="menu_quattro_formaggi_tomato">
+  <h3>quattro formaggi tomato<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#TomatoTopping" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping">tomato topping</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="vegetarian">
+  <h3>vegetarian<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#DietCategory" title="https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory">diet category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   <div id="changelog">null</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
