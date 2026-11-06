@@ -1,0 +1,9 @@
+# CQ5: How hot is each pizza on the menu?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pizza: <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>
+PREFIX cl: <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#>
+SELECT ?pizza ?level WHERE {
+  ?item cl:isClassifiedBy ?l ; rdfs:label ?pizza .
+  ?l rdf:type pizza:SpicinessLevel ; rdfs:label ?level .
+} ORDER BY ?pizza

@@ -1,0 +1,2153 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.ontologydesignpatterns.org/cp/owl/componency.owl", "http://www.ontologydesignpatterns.org/cp/owl/classification.owl", "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl", "http://www.ontologydesignpatterns.org/cp/owl/partof.owl", "http://www.w3.org/2001/XMLSchema", "http://www.ontologydesignpatterns.org/cp/owl/price.owl" ],
+    "title" : {
+      "en" : "Pizza Ontology"
+    },
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "version" : "1.0.0",
+    "description" : {
+      "en" : "A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology."
+    },
+    "labels" : {
+      "en" : "Pizza Ontology"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza/0.4.0",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Pizza Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "23",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of parmesan.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ParmesanTopping",
+      "en" : "parmesan topping"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_quattro_formaggi_parmesan",
+        "en" : "quattro formaggi parmesan"
+      }
+    } ],
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concept",
+      "undefined" : "Concept"
+    },
+    "subClasses" : [ "6", "7" ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "22",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "23",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "The dough a pizza is built on.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PizzaBase",
+      "en" : "pizza base"
+    },
+    "subClasses" : [ "26", "27" ],
+    "id" : "24",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A named pizza topped with mozzarella, tomato, ham, pineapple.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Hawaiian",
+      "en" : "hawaiian"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_hawaiian",
+        "en" : "hawaiian (menu item)"
+      }
+    } ],
+    "id" : "17",
+    "superClasses" : [ "28", "2" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping made of fruit.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FruitTopping",
+      "en" : "fruit topping"
+    },
+    "subClasses" : [ "33" ],
+    "id" : "32",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of fontina.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FontinaTopping",
+      "en" : "fontina topping"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_quattro_formaggi_fontina",
+        "en" : "quattro formaggi fontina"
+      }
+    } ],
+    "id" : "35",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A concept a menu uses to say which diets a pizza suits.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DietCategory",
+      "en" : "diet category"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "vegetarian",
+        "en" : "vegetarian"
+      }
+    } ],
+    "id" : "7",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of chili pepper.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ChiliPepperTopping",
+      "en" : "chili pepper topping"
+    },
+    "id" : "52",
+    "superClasses" : [ "53", "54" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A topping that makes a pizza hot.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpicyTopping",
+      "en" : "spicy topping"
+    },
+    "subClasses" : [ "52", "55" ],
+    "id" : "53",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of ham.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HamTopping",
+      "en" : "ham topping"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_hawaiian_ham",
+        "en" : "hawaiian ham"
+      }
+    } ],
+    "id" : "47",
+    "superClasses" : [ "56" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "An oven-baked flat bread with toppings.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Pizza",
+      "en" : "pizza"
+    },
+    "subClasses" : [ "57", "28", "2" ],
+    "id" : "30",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A named pizza topped with mozzarella, tomato, mushroom.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Funghi",
+      "en" : "funghi"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_funghi",
+        "en" : "funghi (menu item)"
+      }
+    } ],
+    "id" : "1",
+    "superClasses" : [ "28", "2" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "The price a menu asks for a pizza.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MenuPrice",
+      "en" : "menu price"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_diavola_price",
+        "en" : "diavola price"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_quattro_formaggi_price",
+        "en" : "quattro formaggi price"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_hawaiian_price",
+        "en" : "hawaiian price"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_funghi_price",
+        "en" : "funghi price"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_margherita_price",
+        "en" : "margherita price"
+      }
+    } ],
+    "id" : "58",
+    "superClasses" : [ "59" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A concept a menu uses to say how hot a pizza is.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpicinessLevel",
+      "en" : "spiciness level"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "hot",
+        "en" : "hot"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "mild",
+        "en" : "mild"
+      }
+    } ],
+    "id" : "6",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping made of meat.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MeatTopping",
+      "en" : "meat topping"
+    },
+    "subClasses" : [ "47", "55" ],
+    "id" : "56",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of gorgonzola.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GorgonzolaTopping",
+      "en" : "gorgonzola topping"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_quattro_formaggi_gorgonzola",
+        "en" : "quattro formaggi gorgonzola"
+      }
+    } ],
+    "id" : "37",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A named pizza topped with mozzarella, tomato.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Margherita",
+      "en" : "margherita"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_margherita",
+        "en" : "margherita (menu item)"
+      }
+    } ],
+    "id" : "11",
+    "superClasses" : [ "28", "2" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping made of cheese.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CheeseTopping",
+      "en" : "cheese topping"
+    },
+    "subClasses" : [ "3", "37", "35", "41" ],
+    "id" : "4",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Any pizza that has at least one spicy topping.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpicyPizza",
+      "en" : "spicy pizza"
+    },
+    "subClasses" : [ "15" ],
+    "intersection" : [ "30" ],
+    "attributes" : [ "intersection" ],
+    "id" : "57",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping made of a vegetable.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "VegetableTopping",
+      "en" : "vegetable topping"
+    },
+    "subClasses" : [ "79", "20", "52", "80" ],
+    "id" : "54",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity",
+      "undefined" : "Entity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "87"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of tomato.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TomatoTopping",
+      "en" : "tomato topping"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_diavola_tomato",
+        "en" : "diavola tomato"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_funghi_tomato",
+        "en" : "funghi tomato"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_hawaiian_tomato",
+        "en" : "hawaiian tomato"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_quattro_formaggi_tomato",
+        "en" : "quattro formaggi tomato"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_margherita_tomato",
+        "en" : "margherita tomato"
+      }
+    } ],
+    "id" : "20",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza that appears on a menu under a name.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NamedPizza",
+      "en" : "named pizza"
+    },
+    "subClasses" : [ "17", "15", "11", "9", "1" ],
+    "id" : "2",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of mushroom.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MushroomTopping",
+      "en" : "mushroom topping"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_funghi_mushroom",
+        "en" : "funghi mushroom"
+      }
+    } ],
+    "id" : "79",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Currency",
+      "en" : "Currency"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "euro",
+        "en" : "euro"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A system of money in general use in a particular country."
+    },
+    "attributes" : [ "external" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Object",
+      "en" : "Object"
+    },
+    "subClasses" : [ "24", "31", "30" ],
+    "comment" : {
+      "undefined" : "Any physical, social, or mental object, or a substance"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza base rolled thin and baked crisp.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ThinAndCrispyBase",
+      "en" : "thin and crispy base"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_diavola_base",
+        "en" : "diavola base"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_margherita_base",
+        "en" : "margherita base"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_quattro_formaggi_base",
+        "en" : "quattro formaggi base"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_hawaiian_base",
+        "en" : "hawaiian base"
+      }
+    } ],
+    "id" : "27",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A named pizza topped with mozzarella, tomato, spicysalami.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Diavola",
+      "en" : "diavola"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_diavola",
+        "en" : "diavola (menu item)"
+      }
+    } ],
+    "id" : "15",
+    "superClasses" : [ "57", "28", "2" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of olive.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OliveTopping",
+      "en" : "olive topping"
+    },
+    "id" : "80",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A thick pizza base baked in a pan.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DeepPanBase",
+      "en" : "deep pan base"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_funghi_base",
+        "en" : "funghi base"
+      }
+    } ],
+    "id" : "26",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of pineapple.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PineappleTopping",
+      "en" : "pineapple topping"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_hawaiian_pineapple",
+        "en" : "hawaiian pineapple"
+      }
+    } ],
+    "id" : "33",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Any pizza that has at least one cheese topping.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CheesyPizza",
+      "en" : "cheesy pizza"
+    },
+    "subClasses" : [ "17", "15", "11", "9", "1" ],
+    "intersection" : [ "30" ],
+    "attributes" : [ "intersection" ],
+    "id" : "28",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Price",
+      "en" : "Price"
+    },
+    "subClasses" : [ "58" ],
+    "comment" : {
+      "undefined" : "The amount of money expected, required, or given in payment for something."
+    },
+    "attributes" : [ "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "An ingredient put on a pizza base.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PizzaTopping",
+      "en" : "pizza topping"
+    },
+    "subClasses" : [ "4", "56", "32", "53", "54" ],
+    "id" : "31",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of mozzarella.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MozzarellaTopping",
+      "en" : "mozzarella topping"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_margherita_mozzarella",
+        "en" : "margherita mozzarella"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_quattro_formaggi_mozzarella",
+        "en" : "quattro formaggi mozzarella"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_hawaiian_mozzarella",
+        "en" : "hawaiian mozzarella"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_diavola_mozzarella",
+        "en" : "diavola mozzarella"
+      }
+    }, {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_funghi_mozzarella",
+        "en" : "funghi mozzarella"
+      }
+    } ],
+    "id" : "41",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A pizza topping of spicy salami.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpicySalamiTopping",
+      "en" : "spicy salami topping"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_diavola_spicysalami",
+        "en" : "diavola spicysalami"
+      }
+    } ],
+    "id" : "55",
+    "superClasses" : [ "56", "53" ]
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "instances" : 0,
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A named pizza topped with mozzarella, parmesan, gorgonzola, fontina, tomato.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "QuattroFormaggi",
+      "en" : "quattro formaggi"
+    },
+    "individuals" : [ {
+      "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi",
+      "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+      "labels" : {
+        "IRI-based" : "menu_quattro_formaggi",
+        "en" : "quattro formaggi (menu item)"
+      }
+    } ],
+    "id" : "9",
+    "superClasses" : [ "28", "2" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "36",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "38",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "39",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "40",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "42",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "43",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "46",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "48",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "102",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "103",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "106",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "107",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "108",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "109",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "110",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "111",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "range" : "2",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "range" : "2",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "range" : "5",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "12"
+  }, {
+    "range" : "5",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "range" : "2",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "range" : "2",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "20",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "9",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "31",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "30",
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "35",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "9",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "37",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "9",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "3",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "9",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "20",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "11",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "41",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "11",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "41",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "9",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "24",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to the base it is built on.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasBase",
+      "en" : "has base"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "30",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "24",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to the base it is built on.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasBase",
+      "en" : "has base"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "30",
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "20",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "17",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "47",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "17",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "41",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "17",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "48"
+  }, {
+    "range" : "28",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "28",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
+  }, {
+    "range" : "28",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "4",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "range" : "4",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "range" : "28",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
+  }, {
+    "range" : "28",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
+  }, {
+    "range" : "56",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "range" : "56",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "4",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "30",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+    "range" : "22",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isPriceOf",
+      "en" : "is price of"
+    },
+    "domain" : "59",
+    "attributes" : [ "external", "object" ],
+    "id" : "69"
+  }, {
+    "range" : "30",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart",
+    "inverse" : "72",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl",
+    "range" : "23",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPart",
+      "en" : "has part"
+    },
+    "domain" : "23",
+    "subproperty" : [ "21" ],
+    "comment" : {
+      "undefined" : "A transitive relation expressing parthood between any entities, e.g. 'the human body has a brain as part'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "71"
+  }, {
+    "range" : "30",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "25",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "25",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "range" : "53",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "53",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "range" : "24",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "range" : "24",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "25",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "range" : "32",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+    "range" : "85",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasCurrency",
+      "en" : "has currency"
+    },
+    "cardinality" : "1",
+    "domain" : "59",
+    "attributes" : [ "external", "object" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+    "range" : "18",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasValue",
+      "en" : "has value"
+    },
+    "minCardinality" : "1",
+    "domain" : "59",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "86"
+  }, {
+    "range" : "54",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "range" : "54",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "range" : "54",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "90"
+  }, {
+    "range" : "54",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "isClassifiedBy",
+      "undefined" : "isClassifiedBy"
+    },
+    "domain" : "87",
+    "attributes" : [ "external", "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice",
+    "inverse" : "69",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+    "range" : "59",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPrice",
+      "en" : "has price"
+    },
+    "domain" : "22",
+    "attributes" : [ "external", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "31",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "31",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "range" : "57",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "96"
+  }, {
+    "range" : "31",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "97"
+  }, {
+    "range" : "59",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "98"
+  }, {
+    "range" : "31",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "99"
+  }, {
+    "range" : "31",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "100"
+  }, {
+    "range" : "59",
+    "domain" : "85",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "41",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "15",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "55",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "15",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl",
+    "range" : "23",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "en" : "is part of"
+    },
+    "domain" : "23",
+    "subproperty" : [ "104" ],
+    "comment" : {
+      "undefined" : "A transitive relation expressing parthood between any entities, e.g. 'brain is a part of the human body'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'."
+    },
+    "attributes" : [ "external", "object", "transitive" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "20",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "15",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "41",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "1",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "20",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "1",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "79",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "1",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+    "baseIri" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+    "range" : "33",
+    "annotations" : {
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "Relates a pizza to a topping on it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopping",
+      "en" : "has topping"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "17",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent",
+    "inverse" : "104",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+    "range" : "25",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasComponent",
+      "en" : "has component"
+    },
+    "superproperty" : [ "71" ],
+    "domain" : "25",
+    "subproperty" : [ "29", "44" ],
+    "comment" : {
+      "undefined" : "The hasPart relation without transitivity, holding between an entity (the system) and another (the component), and assuming a design that structures the system. For an explicit pattern encoding design, see the 'designobject' pattern.\nThe componency pattern uses the transitive reduction logical pattern to preserve transitive on the superproperty from the partof pattern. In practice, the partof pattern acts here as the transitive reduction of the componency pattern."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+    "range" : "25",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isComponentOf",
+      "en" : "is component of"
+    },
+    "superproperty" : [ "72" ],
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "The hasPart relation without transitivity, holding between an entity (the system) and another (the component), and assuming a design that structures the system. For an explicit pattern encoding design, see the 'designobject' pattern.\nThe componency pattern uses the transitive reduction logical pattern to preserve transitive on the superproperty from the partof pattern. In practice, the partof pattern acts here as the transitive reduction of the componency pattern."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "classifies",
+      "undefined" : "classifies"
+    },
+    "domain" : "5",
+    "attributes" : [ "external", "object" ],
+    "id" : "112"
+  } ]
+}

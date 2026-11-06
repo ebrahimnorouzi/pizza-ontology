@@ -1,0 +1,10 @@
+# CQ7: Which pizzas cost less than 10 euros?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pizza: <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>
+PREFIX pr: <http://www.ontologydesignpatterns.org/cp/owl/price.owl#>
+SELECT ?pizza ?amount WHERE {
+  ?item pr:hasPrice ?price ; rdfs:label ?pizza .
+  ?price pr:hasValue ?amount ; pr:hasCurrency pizza:euro .
+  FILTER (?amount < 10)
+} ORDER BY ?amount

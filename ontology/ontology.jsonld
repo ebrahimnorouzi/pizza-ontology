@@ -1,0 +1,1531 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza"
+    }, {
+      "@id" : "_:genid29"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza"
+    }, {
+      "@id" : "_:genid7"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Concept"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Entity"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "classifies"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isClassifiedBy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Any physical, social, or mental object, or a substance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The hasPart relation without transitivity, holding between an entity (the system) and another (the component), and assuming a design that structures the system. For an explicit pattern encoding design, see the 'designobject' pattern.\nThe componency pattern uses the transitive reduction logical pattern to preserve transitive on the superproperty from the partof pattern. In practice, the partof pattern acts here as the transitive reduction of the componency pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The hasPart relation without transitivity, holding between an entity (the system) and another (the component), and assuming a design that structures the system. For an explicit pattern encoding design, see the 'designobject' pattern.\nThe componency pattern uses the transitive reduction logical pattern to preserve transitive on the superproperty from the partof pattern. In practice, the partof pattern acts here as the transitive reduction of the componency pattern."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is component of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A transitive relation expressing parthood between any entities, e.g. 'the human body has a brain as part'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has part"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A transitive relation expressing parthood between any entities, e.g. 'brain is a part of the human body'. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see 'componency'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/partof.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is part of"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A system of money in general use in a particular country."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Currency"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The amount of money expected, required, or given in payment for something."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has currency"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is price of"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#Thing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Pizza Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pizza Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza/0.4.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza/1.0.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0.0"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping made of cheese."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cheese topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "Any pizza that has at least one cheese topping."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cheesy pizza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ChiliPepperTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of chili pepper."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "chili pepper topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A thick pizza base baked in a pan."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "deep pan base"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A named pizza topped with mozzarella, tomato, spicysalami."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "diavola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A concept a menu uses to say which diets a pizza suits."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "diet category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of fontina."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "fontina topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping made of fruit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "fruit topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A named pizza topped with mozzarella, tomato, mushroom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funghi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza"
+  }, {
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of gorgonzola."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gorgonzola topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of ham."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ham topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A named pizza topped with mozzarella, tomato, ham, pineapple."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hawaiian"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza"
+  }, {
+    "@id" : "_:genid15"
+  }, {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A named pizza topped with mozzarella, tomato."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "margherita"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza"
+  }, {
+    "@id" : "_:genid19"
+  }, {
+    "@id" : "_:genid20"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping made of meat."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "meat topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "The price a menu asks for a pizza."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "menu price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of mozzarella."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "mozzarella topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of mushroom."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "mushroom topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza that appears on a menu under a name."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "named pizza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#OliveTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of olive."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "olive topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of parmesan."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "parmesan topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheeseTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of pineapple."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pineapple topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FruitTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "An oven-baked flat bread with toppings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pizza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object"
+  }, {
+    "@id" : "_:genid21"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "The dough a pizza is built on."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pizza base"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "An ingredient put on a pizza base."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pizza topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A named pizza topped with mozzarella, parmesan, gorgonzola, fontina, tomato."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "quattro formaggi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#CheesyPizza"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#NamedPizza"
+  }, {
+    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid23"
+  }, {
+    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid25"
+  }, {
+    "@id" : "_:genid26"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A concept a menu uses to say how hot a pizza is."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "spiciness level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyPizza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "Any pizza that has at least one spicy topping."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "spicy pizza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid27"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of spicy salami."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "spicy salami topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MeatTopping"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicyTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A topping that makes a pizza hot."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "spicy topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza base rolled thin and baked crisp."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "thin and crispy base"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping of tomato."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "tomato topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#VegetableTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A pizza topping made of a vegetable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "vegetable topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "euro"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "Relates a pizza to the base it is built on."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has base"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaBase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "Relates a pizza to a topping on it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Pizza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has topping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PizzaTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hot"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hot"
+  } ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Diavola"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "diavola (menu item)"
+  } ],
+  "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base"
+  } ],
+  "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_base",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "diavola base"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_mozzarella",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "diavola mozzarella"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro"
+  } ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "10.50"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "diavola price"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_spicysalami",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicySalamiTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "diavola spicysalami"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_diavola_tomato",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "diavola tomato"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian"
+  } ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Funghi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funghi (menu item)"
+  } ],
+  "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base"
+  } ],
+  "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_base",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DeepPanBase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funghi base"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mozzarella",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funghi mozzarella"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_mushroom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MushroomTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funghi mushroom"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro"
+  } ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "9.50"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funghi price"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_funghi_tomato",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "funghi tomato"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"
+  } ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Hawaiian"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hawaiian (menu item)"
+  } ],
+  "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base"
+  } ],
+  "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_base",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hawaiian base"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_ham",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#HamTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hawaiian ham"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_mozzarella",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hawaiian mozzarella"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_pineapple",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#PineappleTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hawaiian pineapple"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro"
+  } ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "10.00"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hawaiian price"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_hawaiian_tomato",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hawaiian tomato"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian"
+  } ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#Margherita"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "margherita (menu item)"
+  } ],
+  "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base"
+  } ],
+  "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_base",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "margherita base"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_mozzarella",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "margherita mozzarella"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro"
+  } ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "8.50"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "margherita price"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_margherita_tomato",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "margherita tomato"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian"
+  } ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#QuattroFormaggi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "quattro formaggi (menu item)"
+  } ],
+  "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasBase" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base"
+  } ],
+  "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#hasTopping" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan"
+  }, {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_base",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ThinAndCrispyBase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "quattro formaggi base"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_fontina",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#FontinaTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "quattro formaggi fontina"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_gorgonzola",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#GorgonzolaTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "quattro formaggi gorgonzola"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_mozzarella",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MozzarellaTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "quattro formaggi mozzarella"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_parmesan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#ParmesanTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "quattro formaggi parmesan"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#euro"
+  } ],
+  "http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "11.00"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#MenuPrice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "quattro formaggi price"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#menu_quattro_formaggi_tomato",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#TomatoTopping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "quattro formaggi tomato"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#mild",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#SpicinessLevel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "mild"
+  } ]
+}, {
+  "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#vegetarian",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#DietCategory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "vegetarian"
+  } ]
+} ]
