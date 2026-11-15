@@ -1,0 +1,21 @@
+# ODK configuration for Pizza Ontology, written by OntoBoard for ODK v1.6.1.
+# After changing it, run OntoBoard > Project > Update project files... (ODK: sh run.sh update_repo).
+id: pizza
+title: "Pizza Ontology"
+description: "A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology."
+uribase: https://ebrahimnorouzi.github.io/pizza-ontology
+license: https://creativecommons.org/licenses/by/4.0/
+repo: pizza
+release_artefacts:
+  - full
+primary_release: full
+export_formats:
+  - owl
+import_group:
+  products: []
+robot_report:
+  use_labels: TRUE
+  fail_on: ERROR
+  custom_profile: TRUE
+  report_on:
+    - edit

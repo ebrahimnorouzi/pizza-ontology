@@ -1,0 +1,94 @@
+# ODK-managed rules, do not modify
+# If you need to add your own ignore rules, you may do so below
+# the "End ODK-managed rules" marker at the end of this file.
+.DS_Store
+semantic.cache
+bin/
+
+*.tmp
+*.tmp.obo
+*.tmp.owl
+*.tmp.json
+*-relation-graph.tsv.gz
+.template.db
+
+.github/token.txt
+
+/pizza.owl
+/pizza.obo
+/pizza.json
+/pizza.db
+/pizza-base.*
+/pizza-basic.*
+/pizza-full.*
+/pizza-simple.*
+/pizza-simple-non-classified.*
+/mappings/
+/patterns/
+/reports/
+/subsets/
+
+src/ontology/mirror
+src/ontology/mirror/*
+src/ontology/reports/*
+!src/ontology/reports/release-diff.md
+src/ontology/pizza.owl
+src/ontology/pizza.obo
+src/ontology/pizza.json
+src/ontology/pizza.db
+src/ontology/pizza-base.*
+src/ontology/pizza-basic.*
+src/ontology/pizza-full.*
+src/ontology/pizza-simple.*
+src/ontology/pizza-simple-non-classified.*
+
+src/ontology/seed.txt
+src/ontology/dosdp-tools.log
+src/ontology/ed_definitions_merged.owl
+src/ontology/ontologyterms.txt
+src/ontology/simple_seed.txt
+src/ontology/patterns
+src/ontology/merged-pizza-edit.owl
+src/ontology/pizza-edit.properties
+
+src/ontology/target/
+src/ontology/tmp/*
+!src/ontology/tmp/.gitkeep
+!src/ontology/tmp/README.md
+
+src/ontology/run.sh.conf
+src/ontology/run.sh.env
+
+src/ontology/imports/*_terms_combined.txt
+
+src/patterns/data/**/*.ofn
+src/patterns/data/**/*.txt
+src/patterns/pattern_owl_seed.txt
+src/patterns/all_pattern_terms.txt
+
+# End of ODK-managed rules
+# Build products only.
+#
+# The release artefact - <id>.owl at the project ROOT, written by
+# `make prepare_release` - is deliberately not here. That one is the
+# product, and ODK projects commit it so a PURL resolves to something.
+#
+# Import modules under src/ontology/imports/ are not here either. A
+# module is not reproducible output: it is a few dozen axioms this
+# project chose to copy from a much larger ontology at a particular
+# release. Ignore it and the catalog entry beside it points at a file
+# nobody else has.
+#
+# src/ontology/mirror/ IS ignored, unlike imports/. A mirror is a
+# downloaded copy of an upstream ontology - a large one is hundreds of
+# megabytes - and it is reproducible from the source each term list
+# records. Project > Refresh imports... rebuilds it. The modules under
+# imports/ are NOT reproducible that way, which is why those are
+# committed and this is not.
+src/ontology/mirror/
+tmp_*
+report.tsv
+validate-profile.txt
+# robot verify writes one CSV per failing query into src/ontology.
+src/ontology/*.csv
+*.bak

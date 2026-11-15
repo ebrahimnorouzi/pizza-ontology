@@ -1,0 +1,20 @@
+Prefix(:=<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+
+
+Ontology(<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl>
+Annotation(dcterms:description "A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology."@en)
+Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
+Annotation(dcterms:title "Pizza Ontology"@en)
+Annotation(rdfs:label "Pizza Ontology"@en)
+
+Declaration(AnnotationProperty(dcterms:description))
+Declaration(AnnotationProperty(dcterms:license))
+Declaration(AnnotationProperty(dcterms:title))
+
+)
