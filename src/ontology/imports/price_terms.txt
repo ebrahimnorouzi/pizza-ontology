@@ -1,0 +1,13 @@
+# Terms extracted into price_import.owl
+# Source: http://www.ontologydesignpatterns.org/cp/owl/price.owl
+# Pattern: price
+# From OntoBoard's pattern library, so nothing downloads it and Refresh
+# imports leaves it alone. To change what the module contains, use
+# OntoBoard > ROBOT > Pattern library... and import the pattern again.
+# One term per line.
+http://www.ontologydesignpatterns.org/cp/owl/price.owl#Currency
+http://www.ontologydesignpatterns.org/cp/owl/price.owl#Price
+http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasCurrency
+http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasPrice
+http://www.ontologydesignpatterns.org/cp/owl/price.owl#hasValue
+http://www.ontologydesignpatterns.org/cp/owl/price.owl#isPriceOf

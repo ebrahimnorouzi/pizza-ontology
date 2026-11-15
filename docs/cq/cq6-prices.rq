@@ -1,0 +1,10 @@
+# CQ6: How much does each pizza on the menu cost, and in which currency?
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pizza: <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>
+PREFIX pr: <http://www.ontologydesignpatterns.org/cp/owl/price.owl#>
+SELECT ?pizza ?amount ?currency WHERE {
+  ?item pr:hasPrice ?price ; rdfs:label ?pizza .
+  ?price pr:hasValue ?amount ; pr:hasCurrency ?c .
+  ?c rdfs:label ?currency .
+} ORDER BY ?pizza

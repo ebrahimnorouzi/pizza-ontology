@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                3157f7681a08440ad04f794869969758f53a1e4917c0a9041b3d52b5ab2e9be4
+CONFIG_HASH=                71884c847922da88a727ff295ba5decf716728e693abeb58ff890f1606a70078
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  classification componency
+IMPORTS =  classification componency price
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -426,6 +426,12 @@ $(IMPORTDIR)/componency_import.owl:
 	@echo "       This rule needs to be overwritten in pizza.Makefile!"
 	@false
 
+## Module for ontology: price (custom)
+$(IMPORTDIR)/price_import.owl: 
+	@echo "ERROR: You have configured price as a custom module;"
+	@echo "       This rule needs to be overwritten in pizza.Makefile!"
+	@false
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -464,6 +470,10 @@ ifeq ($(MIR),true)
 
 
 ## ONTOLOGY: componency
+## You have configured your default mirror type to no_mirror.
+
+
+## ONTOLOGY: price
 ## You have configured your default mirror type to no_mirror.
 
 

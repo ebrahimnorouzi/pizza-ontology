@@ -1,0 +1,9 @@
+# CQ6 test: every pizza on the menu has a price with a value and a currency. Lists the ones without.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pizza: <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>
+PREFIX pr: <http://www.ontologydesignpatterns.org/cp/owl/price.owl#>
+SELECT ?pizza WHERE {
+  ?pizza rdf:type/rdfs:subClassOf* pizza:Pizza .
+  FILTER NOT EXISTS { ?pizza pr:hasPrice ?price . ?price pr:hasValue ?value ; pr:hasCurrency ?currency }
+}

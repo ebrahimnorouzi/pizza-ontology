@@ -32,6 +32,7 @@ products:
 dependencies:
 - id: classification
 - id: componency
+- id: price
 tracker: https://github.com//pizza/issues
 license:
   url: http://creativecommons.org/licenses/by/3.0/

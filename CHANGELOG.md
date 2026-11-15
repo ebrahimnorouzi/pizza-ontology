@@ -3,6 +3,14 @@
 All notable changes to the Pizza Ontology. Versions follow [Semantic Versioning](https://semver.org/);
 each one is a release under `releases/<version>/` and a git tag `v<version>`.
 
+## [0.4.0] - 2026-10-31
+
+### Added
+- Iteration 3 (story S3, CQ6-CQ7): the **Price** pattern imported as `imports/price_import.owl`
+  and specialised: `MenuPrice` under `Price`, `euro` a `Currency`, and a price with a value and a
+  currency for every menu item.
+- CQ test `cq6_every_pizza_has_a_price.rq`; CQ6 and CQ7 queries and answers in `docs/cq/`.
+
 ## [0.3.0] - 2026-10-31
 
 ### Added

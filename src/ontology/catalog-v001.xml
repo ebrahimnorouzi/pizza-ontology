@@ -3,5 +3,6 @@
   <group id="odk-managed-catalog" prefer="public">
     <uri name="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/classification_import.owl" uri="imports/classification_import.owl" />
     <uri name="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/componency_import.owl" uri="imports/componency_import.owl" />
+    <uri name="https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/price_import.owl" uri="imports/price_import.owl" />
   </group>
 </catalog>

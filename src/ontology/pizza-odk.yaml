@@ -19,6 +19,9 @@ import_group:
     - id: componency
       module_type: custom
       mirror_type: no_mirror
+    - id: price
+      module_type: custom
+      mirror_type: no_mirror
 robot_report:
   use_labels: TRUE
   fail_on: ERROR
