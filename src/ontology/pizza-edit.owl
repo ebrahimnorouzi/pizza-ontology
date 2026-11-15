@@ -6,21 +6,25 @@ Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
+Prefix(classification:=<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#>)
 
 
 Ontology(<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl>
+Import(<https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/classification_import.owl>)
 Import(<https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/componency_import.owl>)
 Annotation(dcterms:description "A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology."@en)
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "Pizza Ontology"@en)
 Annotation(rdfs:label "Pizza Ontology"@en)
 
+Declaration(Class(classification:Concept))
 Declaration(Class(<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object>))
 Declaration(Class(:CheeseTopping))
 Declaration(Class(:CheesyPizza))
 Declaration(Class(:ChiliPepperTopping))
 Declaration(Class(:DeepPanBase))
 Declaration(Class(:Diavola))
+Declaration(Class(:DietCategory))
 Declaration(Class(:FontinaTopping))
 Declaration(Class(:FruitTopping))
 Declaration(Class(:Funghi))
@@ -39,15 +43,18 @@ Declaration(Class(:Pizza))
 Declaration(Class(:PizzaBase))
 Declaration(Class(:PizzaTopping))
 Declaration(Class(:QuattroFormaggi))
+Declaration(Class(:SpicinessLevel))
 Declaration(Class(:SpicyPizza))
 Declaration(Class(:SpicySalamiTopping))
 Declaration(Class(:SpicyTopping))
 Declaration(Class(:ThinAndCrispyBase))
 Declaration(Class(:TomatoTopping))
 Declaration(Class(:VegetableTopping))
+Declaration(ObjectProperty(classification:isClassifiedBy))
 Declaration(ObjectProperty(<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent>))
 Declaration(ObjectProperty(:hasBase))
 Declaration(ObjectProperty(:hasTopping))
+Declaration(NamedIndividual(:hot))
 Declaration(NamedIndividual(:menu_diavola))
 Declaration(NamedIndividual(:menu_diavola_base))
 Declaration(NamedIndividual(:menu_diavola_mozzarella))
@@ -75,6 +82,8 @@ Declaration(NamedIndividual(:menu_quattro_formaggi_gorgonzola))
 Declaration(NamedIndividual(:menu_quattro_formaggi_mozzarella))
 Declaration(NamedIndividual(:menu_quattro_formaggi_parmesan))
 Declaration(NamedIndividual(:menu_quattro_formaggi_tomato))
+Declaration(NamedIndividual(:mild))
+Declaration(NamedIndividual(:vegetarian))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
@@ -139,6 +148,12 @@ SubClassOf(:Diavola :NamedPizza)
 SubClassOf(:Diavola ObjectSomeValuesFrom(:hasTopping :MozzarellaTopping))
 SubClassOf(:Diavola ObjectSomeValuesFrom(:hasTopping :SpicySalamiTopping))
 SubClassOf(:Diavola ObjectSomeValuesFrom(:hasTopping :TomatoTopping))
+
+# Class: :DietCategory (diet category)
+
+AnnotationAssertion(obo:IAO_0000115 :DietCategory "A concept a menu uses to say which diets a pizza suits."@en)
+AnnotationAssertion(rdfs:label :DietCategory "diet category"@en)
+SubClassOf(:DietCategory classification:Concept)
 
 # Class: :FontinaTopping (fontina topping)
 
@@ -263,6 +278,12 @@ SubClassOf(:QuattroFormaggi ObjectSomeValuesFrom(:hasTopping :MozzarellaTopping)
 SubClassOf(:QuattroFormaggi ObjectSomeValuesFrom(:hasTopping :ParmesanTopping))
 SubClassOf(:QuattroFormaggi ObjectSomeValuesFrom(:hasTopping :TomatoTopping))
 
+# Class: :SpicinessLevel (spiciness level)
+
+AnnotationAssertion(obo:IAO_0000115 :SpicinessLevel "A concept a menu uses to say how hot a pizza is."@en)
+AnnotationAssertion(rdfs:label :SpicinessLevel "spiciness level"@en)
+SubClassOf(:SpicinessLevel classification:Concept)
+
 # Class: :SpicyPizza (spicy pizza)
 
 AnnotationAssertion(obo:IAO_0000115 :SpicyPizza "Any pizza that has at least one spicy topping."@en)
@@ -305,10 +326,16 @@ SubClassOf(:VegetableTopping :PizzaTopping)
 #   Named Individuals
 ############################
 
+# Individual: :hot (hot)
+
+AnnotationAssertion(rdfs:label :hot "hot"@en)
+ClassAssertion(:SpicinessLevel :hot)
+
 # Individual: :menu_diavola (diavola (menu item))
 
 AnnotationAssertion(rdfs:label :menu_diavola "diavola (menu item)"@en)
 ClassAssertion(:Diavola :menu_diavola)
+ObjectPropertyAssertion(classification:isClassifiedBy :menu_diavola :hot)
 ObjectPropertyAssertion(:hasBase :menu_diavola :menu_diavola_base)
 ObjectPropertyAssertion(:hasTopping :menu_diavola :menu_diavola_mozzarella)
 ObjectPropertyAssertion(:hasTopping :menu_diavola :menu_diavola_spicysalami)
@@ -338,6 +365,8 @@ ClassAssertion(:TomatoTopping :menu_diavola_tomato)
 
 AnnotationAssertion(rdfs:label :menu_funghi "funghi (menu item)"@en)
 ClassAssertion(:Funghi :menu_funghi)
+ObjectPropertyAssertion(classification:isClassifiedBy :menu_funghi :mild)
+ObjectPropertyAssertion(classification:isClassifiedBy :menu_funghi :vegetarian)
 ObjectPropertyAssertion(:hasBase :menu_funghi :menu_funghi_base)
 ObjectPropertyAssertion(:hasTopping :menu_funghi :menu_funghi_mozzarella)
 ObjectPropertyAssertion(:hasTopping :menu_funghi :menu_funghi_mushroom)
@@ -367,6 +396,7 @@ ClassAssertion(:TomatoTopping :menu_funghi_tomato)
 
 AnnotationAssertion(rdfs:label :menu_hawaiian "hawaiian (menu item)"@en)
 ClassAssertion(:Hawaiian :menu_hawaiian)
+ObjectPropertyAssertion(classification:isClassifiedBy :menu_hawaiian :mild)
 ObjectPropertyAssertion(:hasBase :menu_hawaiian :menu_hawaiian_base)
 ObjectPropertyAssertion(:hasTopping :menu_hawaiian :menu_hawaiian_ham)
 ObjectPropertyAssertion(:hasTopping :menu_hawaiian :menu_hawaiian_mozzarella)
@@ -402,6 +432,8 @@ ClassAssertion(:TomatoTopping :menu_hawaiian_tomato)
 
 AnnotationAssertion(rdfs:label :menu_margherita "margherita (menu item)"@en)
 ClassAssertion(:Margherita :menu_margherita)
+ObjectPropertyAssertion(classification:isClassifiedBy :menu_margherita :mild)
+ObjectPropertyAssertion(classification:isClassifiedBy :menu_margherita :vegetarian)
 ObjectPropertyAssertion(:hasBase :menu_margherita :menu_margherita_base)
 ObjectPropertyAssertion(:hasTopping :menu_margherita :menu_margherita_mozzarella)
 ObjectPropertyAssertion(:hasTopping :menu_margherita :menu_margherita_tomato)
@@ -425,6 +457,8 @@ ClassAssertion(:TomatoTopping :menu_margherita_tomato)
 
 AnnotationAssertion(rdfs:label :menu_quattro_formaggi "quattro formaggi (menu item)"@en)
 ClassAssertion(:QuattroFormaggi :menu_quattro_formaggi)
+ObjectPropertyAssertion(classification:isClassifiedBy :menu_quattro_formaggi :mild)
+ObjectPropertyAssertion(classification:isClassifiedBy :menu_quattro_formaggi :vegetarian)
 ObjectPropertyAssertion(:hasBase :menu_quattro_formaggi :menu_quattro_formaggi_base)
 ObjectPropertyAssertion(:hasTopping :menu_quattro_formaggi :menu_quattro_formaggi_fontina)
 ObjectPropertyAssertion(:hasTopping :menu_quattro_formaggi :menu_quattro_formaggi_gorgonzola)
@@ -461,6 +495,16 @@ ClassAssertion(:ParmesanTopping :menu_quattro_formaggi_parmesan)
 
 AnnotationAssertion(rdfs:label :menu_quattro_formaggi_tomato "quattro formaggi tomato"@en)
 ClassAssertion(:TomatoTopping :menu_quattro_formaggi_tomato)
+
+# Individual: :mild (mild)
+
+AnnotationAssertion(rdfs:label :mild "mild"@en)
+ClassAssertion(:SpicinessLevel :mild)
+
+# Individual: :vegetarian (vegetarian)
+
+AnnotationAssertion(rdfs:label :vegetarian "vegetarian"@en)
+ClassAssertion(:DietCategory :vegetarian)
 
 
 )

@@ -3,6 +3,16 @@
 All notable changes to the Pizza Ontology. Versions follow [Semantic Versioning](https://semver.org/);
 each one is a release under `releases/<version>/` and a git tag `v<version>`.
 
+## [0.3.0] - 2026-10-31
+
+### Added
+- Iteration 2 (story S2, CQ4-CQ5): the **Classification** pattern imported as
+  `imports/classification_import.owl` and specialised: `DietCategory` and `SpicinessLevel` under
+  `Concept`; `vegetarian`, `mild` and `hot`; every menu item `isClassifiedBy` its spiciness level,
+  and the vegetarian ones by `vegetarian`.
+- CQ tests `cq4_vegetarian_pizzas_have_no_meat.rq`, `cq5_every_pizza_has_a_spiciness_level.rq`;
+  CQ4 and CQ5 queries and answers in `docs/cq/`.
+
 ## [0.2.0] - 2026-10-31
 
 ### Added

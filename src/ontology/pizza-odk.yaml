@@ -13,6 +13,9 @@ export_formats:
   - owl
 import_group:
   products:
+    - id: classification
+      module_type: custom
+      mirror_type: no_mirror
     - id: componency
       module_type: custom
       mirror_type: no_mirror

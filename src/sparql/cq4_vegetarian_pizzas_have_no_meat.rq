@@ -1,0 +1,10 @@
+# CQ4 test: no pizza classified as vegetarian has a meat topping. Lists the ones that do.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pizza: <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>
+PREFIX cl: <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#>
+SELECT ?pizza ?topping WHERE {
+  ?pizza cl:isClassifiedBy pizza:vegetarian ;
+         pizza:hasTopping ?topping .
+  ?topping rdf:type/rdfs:subClassOf* pizza:MeatTopping .
+}

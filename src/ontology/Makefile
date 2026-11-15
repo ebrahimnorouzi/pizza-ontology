@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                16b04f31dad3490088fb6fd784f148b18e5d16d3a6dd1c2b5c63256bedceb1ef
+CONFIG_HASH=                3157f7681a08440ad04f794869969758f53a1e4917c0a9041b3d52b5ab2e9be4
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  componency
+IMPORTS =  classification componency
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -414,6 +414,12 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
+## Module for ontology: classification (custom)
+$(IMPORTDIR)/classification_import.owl: 
+	@echo "ERROR: You have configured classification as a custom module;"
+	@echo "       This rule needs to be overwritten in pizza.Makefile!"
+	@false
+
 ## Module for ontology: componency (custom)
 $(IMPORTDIR)/componency_import.owl: 
 	@echo "ERROR: You have configured componency as a custom module;"
@@ -451,6 +457,10 @@ no-mirror-refresh-%:
 # ----------------------------------------
 
 ifeq ($(MIR),true)
+
+
+## ONTOLOGY: classification
+## You have configured your default mirror type to no_mirror.
 
 
 ## ONTOLOGY: componency
