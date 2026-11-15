@@ -7,3 +7,9 @@ nav:
   - Home: index.md
   - Editing: editing.md
   - Releases: release.md
+  - Ontology documentation: ontology/index-en.html
+
+# Widoco writes a readme.md beside the page it generates: its note to whoever
+# publishes the page, not a page for readers.
+exclude_docs: |
+  ontology/readme.md
