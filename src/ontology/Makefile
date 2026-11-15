@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                4aee3023062416eb344070c1ca0a5c04ce6b3b63ac072acc94250daaaf5516e6
+CONFIG_HASH=                16b04f31dad3490088fb6fd784f148b18e5d16d3a6dd1c2b5c63256bedceb1ef
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS = 
+IMPORTS =  componency
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -414,6 +414,12 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
+## Module for ontology: componency (custom)
+$(IMPORTDIR)/componency_import.owl: 
+	@echo "ERROR: You have configured componency as a custom module;"
+	@echo "       This rule needs to be overwritten in pizza.Makefile!"
+	@false
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -445,6 +451,10 @@ no-mirror-refresh-%:
 # ----------------------------------------
 
 ifeq ($(MIR),true)
+
+
+## ONTOLOGY: componency
+## You have configured your default mirror type to no_mirror.
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

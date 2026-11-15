@@ -12,7 +12,10 @@ primary_release: full
 export_formats:
   - owl
 import_group:
-  products: []
+  products:
+    - id: componency
+      module_type: custom
+      mirror_type: no_mirror
 robot_report:
   use_labels: TRUE
   fail_on: ERROR

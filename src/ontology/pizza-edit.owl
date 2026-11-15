@@ -1,4 +1,5 @@
 Prefix(:=<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -8,13 +9,458 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl>
+Import(<https://ebrahimnorouzi.github.io/pizza-ontology/pizza/imports/componency_import.owl>)
 Annotation(dcterms:description "A pizza ontology built with OntoBoard from ontology design patterns, following the eXtreme Design methodology."@en)
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "Pizza Ontology"@en)
 Annotation(rdfs:label "Pizza Ontology"@en)
 
+Declaration(Class(<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object>))
+Declaration(Class(:CheeseTopping))
+Declaration(Class(:CheesyPizza))
+Declaration(Class(:ChiliPepperTopping))
+Declaration(Class(:DeepPanBase))
+Declaration(Class(:Diavola))
+Declaration(Class(:FontinaTopping))
+Declaration(Class(:FruitTopping))
+Declaration(Class(:Funghi))
+Declaration(Class(:GorgonzolaTopping))
+Declaration(Class(:HamTopping))
+Declaration(Class(:Hawaiian))
+Declaration(Class(:Margherita))
+Declaration(Class(:MeatTopping))
+Declaration(Class(:MozzarellaTopping))
+Declaration(Class(:MushroomTopping))
+Declaration(Class(:NamedPizza))
+Declaration(Class(:OliveTopping))
+Declaration(Class(:ParmesanTopping))
+Declaration(Class(:PineappleTopping))
+Declaration(Class(:Pizza))
+Declaration(Class(:PizzaBase))
+Declaration(Class(:PizzaTopping))
+Declaration(Class(:QuattroFormaggi))
+Declaration(Class(:SpicyPizza))
+Declaration(Class(:SpicySalamiTopping))
+Declaration(Class(:SpicyTopping))
+Declaration(Class(:ThinAndCrispyBase))
+Declaration(Class(:TomatoTopping))
+Declaration(Class(:VegetableTopping))
+Declaration(ObjectProperty(<http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent>))
+Declaration(ObjectProperty(:hasBase))
+Declaration(ObjectProperty(:hasTopping))
+Declaration(NamedIndividual(:menu_diavola))
+Declaration(NamedIndividual(:menu_diavola_base))
+Declaration(NamedIndividual(:menu_diavola_mozzarella))
+Declaration(NamedIndividual(:menu_diavola_spicysalami))
+Declaration(NamedIndividual(:menu_diavola_tomato))
+Declaration(NamedIndividual(:menu_funghi))
+Declaration(NamedIndividual(:menu_funghi_base))
+Declaration(NamedIndividual(:menu_funghi_mozzarella))
+Declaration(NamedIndividual(:menu_funghi_mushroom))
+Declaration(NamedIndividual(:menu_funghi_tomato))
+Declaration(NamedIndividual(:menu_hawaiian))
+Declaration(NamedIndividual(:menu_hawaiian_base))
+Declaration(NamedIndividual(:menu_hawaiian_ham))
+Declaration(NamedIndividual(:menu_hawaiian_mozzarella))
+Declaration(NamedIndividual(:menu_hawaiian_pineapple))
+Declaration(NamedIndividual(:menu_hawaiian_tomato))
+Declaration(NamedIndividual(:menu_margherita))
+Declaration(NamedIndividual(:menu_margherita_base))
+Declaration(NamedIndividual(:menu_margherita_mozzarella))
+Declaration(NamedIndividual(:menu_margherita_tomato))
+Declaration(NamedIndividual(:menu_quattro_formaggi))
+Declaration(NamedIndividual(:menu_quattro_formaggi_base))
+Declaration(NamedIndividual(:menu_quattro_formaggi_fontina))
+Declaration(NamedIndividual(:menu_quattro_formaggi_gorgonzola))
+Declaration(NamedIndividual(:menu_quattro_formaggi_mozzarella))
+Declaration(NamedIndividual(:menu_quattro_formaggi_parmesan))
+Declaration(NamedIndividual(:menu_quattro_formaggi_tomato))
+Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :hasBase (has base)
+
+AnnotationAssertion(obo:IAO_0000115 :hasBase "Relates a pizza to the base it is built on."@en)
+AnnotationAssertion(rdfs:label :hasBase "has base"@en)
+SubObjectPropertyOf(:hasBase <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent>)
+ObjectPropertyDomain(:hasBase :Pizza)
+ObjectPropertyRange(:hasBase :PizzaBase)
+
+# Object Property: :hasTopping (has topping)
+
+AnnotationAssertion(obo:IAO_0000115 :hasTopping "Relates a pizza to a topping on it."@en)
+AnnotationAssertion(rdfs:label :hasTopping "has topping"@en)
+SubObjectPropertyOf(:hasTopping <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent>)
+ObjectPropertyDomain(:hasTopping :Pizza)
+ObjectPropertyRange(:hasTopping :PizzaTopping)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :CheeseTopping (cheese topping)
+
+AnnotationAssertion(obo:IAO_0000115 :CheeseTopping "A pizza topping made of cheese."@en)
+AnnotationAssertion(rdfs:label :CheeseTopping "cheese topping"@en)
+SubClassOf(:CheeseTopping :PizzaTopping)
+
+# Class: :CheesyPizza (cheesy pizza)
+
+AnnotationAssertion(obo:IAO_0000115 :CheesyPizza "Any pizza that has at least one cheese topping."@en)
+AnnotationAssertion(rdfs:label :CheesyPizza "cheesy pizza"@en)
+EquivalentClasses(:CheesyPizza ObjectIntersectionOf(:Pizza ObjectSomeValuesFrom(:hasTopping :CheeseTopping)))
+
+# Class: :ChiliPepperTopping (chili pepper topping)
+
+AnnotationAssertion(obo:IAO_0000115 :ChiliPepperTopping "A pizza topping of chili pepper."@en)
+AnnotationAssertion(rdfs:label :ChiliPepperTopping "chili pepper topping"@en)
+SubClassOf(:ChiliPepperTopping :SpicyTopping)
+SubClassOf(:ChiliPepperTopping :VegetableTopping)
+
+# Class: :DeepPanBase (deep pan base)
+
+AnnotationAssertion(obo:IAO_0000115 :DeepPanBase "A thick pizza base baked in a pan."@en)
+AnnotationAssertion(rdfs:label :DeepPanBase "deep pan base"@en)
+SubClassOf(:DeepPanBase :PizzaBase)
+
+# Class: :Diavola (diavola)
+
+AnnotationAssertion(obo:IAO_0000115 :Diavola "A named pizza topped with mozzarella, tomato, spicysalami."@en)
+AnnotationAssertion(rdfs:label :Diavola "diavola"@en)
+SubClassOf(:Diavola :NamedPizza)
+SubClassOf(:Diavola ObjectSomeValuesFrom(:hasTopping :MozzarellaTopping))
+SubClassOf(:Diavola ObjectSomeValuesFrom(:hasTopping :SpicySalamiTopping))
+SubClassOf(:Diavola ObjectSomeValuesFrom(:hasTopping :TomatoTopping))
+
+# Class: :FontinaTopping (fontina topping)
+
+AnnotationAssertion(obo:IAO_0000115 :FontinaTopping "A pizza topping of fontina."@en)
+AnnotationAssertion(rdfs:label :FontinaTopping "fontina topping"@en)
+SubClassOf(:FontinaTopping :CheeseTopping)
+
+# Class: :FruitTopping (fruit topping)
+
+AnnotationAssertion(obo:IAO_0000115 :FruitTopping "A pizza topping made of fruit."@en)
+AnnotationAssertion(rdfs:label :FruitTopping "fruit topping"@en)
+SubClassOf(:FruitTopping :PizzaTopping)
+
+# Class: :Funghi (funghi)
+
+AnnotationAssertion(obo:IAO_0000115 :Funghi "A named pizza topped with mozzarella, tomato, mushroom."@en)
+AnnotationAssertion(rdfs:label :Funghi "funghi"@en)
+SubClassOf(:Funghi :NamedPizza)
+SubClassOf(:Funghi ObjectSomeValuesFrom(:hasTopping :MozzarellaTopping))
+SubClassOf(:Funghi ObjectSomeValuesFrom(:hasTopping :MushroomTopping))
+SubClassOf(:Funghi ObjectSomeValuesFrom(:hasTopping :TomatoTopping))
+
+# Class: :GorgonzolaTopping (gorgonzola topping)
+
+AnnotationAssertion(obo:IAO_0000115 :GorgonzolaTopping "A pizza topping of gorgonzola."@en)
+AnnotationAssertion(rdfs:label :GorgonzolaTopping "gorgonzola topping"@en)
+SubClassOf(:GorgonzolaTopping :CheeseTopping)
+
+# Class: :HamTopping (ham topping)
+
+AnnotationAssertion(obo:IAO_0000115 :HamTopping "A pizza topping of ham."@en)
+AnnotationAssertion(rdfs:label :HamTopping "ham topping"@en)
+SubClassOf(:HamTopping :MeatTopping)
+
+# Class: :Hawaiian (hawaiian)
+
+AnnotationAssertion(obo:IAO_0000115 :Hawaiian "A named pizza topped with mozzarella, tomato, ham, pineapple."@en)
+AnnotationAssertion(rdfs:label :Hawaiian "hawaiian"@en)
+SubClassOf(:Hawaiian :NamedPizza)
+SubClassOf(:Hawaiian ObjectSomeValuesFrom(:hasTopping :HamTopping))
+SubClassOf(:Hawaiian ObjectSomeValuesFrom(:hasTopping :MozzarellaTopping))
+SubClassOf(:Hawaiian ObjectSomeValuesFrom(:hasTopping :PineappleTopping))
+SubClassOf(:Hawaiian ObjectSomeValuesFrom(:hasTopping :TomatoTopping))
+
+# Class: :Margherita (margherita)
+
+AnnotationAssertion(obo:IAO_0000115 :Margherita "A named pizza topped with mozzarella, tomato."@en)
+AnnotationAssertion(rdfs:label :Margherita "margherita"@en)
+SubClassOf(:Margherita :NamedPizza)
+SubClassOf(:Margherita ObjectSomeValuesFrom(:hasTopping :MozzarellaTopping))
+SubClassOf(:Margherita ObjectSomeValuesFrom(:hasTopping :TomatoTopping))
+
+# Class: :MeatTopping (meat topping)
+
+AnnotationAssertion(obo:IAO_0000115 :MeatTopping "A pizza topping made of meat."@en)
+AnnotationAssertion(rdfs:label :MeatTopping "meat topping"@en)
+SubClassOf(:MeatTopping :PizzaTopping)
+
+# Class: :MozzarellaTopping (mozzarella topping)
+
+AnnotationAssertion(obo:IAO_0000115 :MozzarellaTopping "A pizza topping of mozzarella."@en)
+AnnotationAssertion(rdfs:label :MozzarellaTopping "mozzarella topping"@en)
+SubClassOf(:MozzarellaTopping :CheeseTopping)
+
+# Class: :MushroomTopping (mushroom topping)
+
+AnnotationAssertion(obo:IAO_0000115 :MushroomTopping "A pizza topping of mushroom."@en)
+AnnotationAssertion(rdfs:label :MushroomTopping "mushroom topping"@en)
+SubClassOf(:MushroomTopping :VegetableTopping)
+
+# Class: :NamedPizza (named pizza)
+
+AnnotationAssertion(obo:IAO_0000115 :NamedPizza "A pizza that appears on a menu under a name."@en)
+AnnotationAssertion(rdfs:label :NamedPizza "named pizza"@en)
+SubClassOf(:NamedPizza :Pizza)
+
+# Class: :OliveTopping (olive topping)
+
+AnnotationAssertion(obo:IAO_0000115 :OliveTopping "A pizza topping of olive."@en)
+AnnotationAssertion(rdfs:label :OliveTopping "olive topping"@en)
+SubClassOf(:OliveTopping :VegetableTopping)
+
+# Class: :ParmesanTopping (parmesan topping)
+
+AnnotationAssertion(obo:IAO_0000115 :ParmesanTopping "A pizza topping of parmesan."@en)
+AnnotationAssertion(rdfs:label :ParmesanTopping "parmesan topping"@en)
+SubClassOf(:ParmesanTopping :CheeseTopping)
+
+# Class: :PineappleTopping (pineapple topping)
+
+AnnotationAssertion(obo:IAO_0000115 :PineappleTopping "A pizza topping of pineapple."@en)
+AnnotationAssertion(rdfs:label :PineappleTopping "pineapple topping"@en)
+SubClassOf(:PineappleTopping :FruitTopping)
+
+# Class: :Pizza (pizza)
+
+AnnotationAssertion(obo:IAO_0000115 :Pizza "An oven-baked flat bread with toppings."@en)
+AnnotationAssertion(rdfs:label :Pizza "pizza"@en)
+SubClassOf(:Pizza <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object>)
+SubClassOf(:Pizza ObjectSomeValuesFrom(:hasBase :PizzaBase))
+
+# Class: :PizzaBase (pizza base)
+
+AnnotationAssertion(obo:IAO_0000115 :PizzaBase "The dough a pizza is built on."@en)
+AnnotationAssertion(rdfs:label :PizzaBase "pizza base"@en)
+SubClassOf(:PizzaBase <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object>)
+
+# Class: :PizzaTopping (pizza topping)
+
+AnnotationAssertion(obo:IAO_0000115 :PizzaTopping "An ingredient put on a pizza base."@en)
+AnnotationAssertion(rdfs:label :PizzaTopping "pizza topping"@en)
+SubClassOf(:PizzaTopping <http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object>)
+
+# Class: :QuattroFormaggi (quattro formaggi)
+
+AnnotationAssertion(obo:IAO_0000115 :QuattroFormaggi "A named pizza topped with mozzarella, parmesan, gorgonzola, fontina, tomato."@en)
+AnnotationAssertion(rdfs:label :QuattroFormaggi "quattro formaggi"@en)
+SubClassOf(:QuattroFormaggi :NamedPizza)
+SubClassOf(:QuattroFormaggi ObjectSomeValuesFrom(:hasTopping :FontinaTopping))
+SubClassOf(:QuattroFormaggi ObjectSomeValuesFrom(:hasTopping :GorgonzolaTopping))
+SubClassOf(:QuattroFormaggi ObjectSomeValuesFrom(:hasTopping :MozzarellaTopping))
+SubClassOf(:QuattroFormaggi ObjectSomeValuesFrom(:hasTopping :ParmesanTopping))
+SubClassOf(:QuattroFormaggi ObjectSomeValuesFrom(:hasTopping :TomatoTopping))
+
+# Class: :SpicyPizza (spicy pizza)
+
+AnnotationAssertion(obo:IAO_0000115 :SpicyPizza "Any pizza that has at least one spicy topping."@en)
+AnnotationAssertion(rdfs:label :SpicyPizza "spicy pizza"@en)
+EquivalentClasses(:SpicyPizza ObjectIntersectionOf(:Pizza ObjectSomeValuesFrom(:hasTopping :SpicyTopping)))
+
+# Class: :SpicySalamiTopping (spicy salami topping)
+
+AnnotationAssertion(obo:IAO_0000115 :SpicySalamiTopping "A pizza topping of spicy salami."@en)
+AnnotationAssertion(rdfs:label :SpicySalamiTopping "spicy salami topping"@en)
+SubClassOf(:SpicySalamiTopping :MeatTopping)
+SubClassOf(:SpicySalamiTopping :SpicyTopping)
+
+# Class: :SpicyTopping (spicy topping)
+
+AnnotationAssertion(obo:IAO_0000115 :SpicyTopping "A topping that makes a pizza hot."@en)
+AnnotationAssertion(rdfs:label :SpicyTopping "spicy topping"@en)
+SubClassOf(:SpicyTopping :PizzaTopping)
+
+# Class: :ThinAndCrispyBase (thin and crispy base)
+
+AnnotationAssertion(obo:IAO_0000115 :ThinAndCrispyBase "A pizza base rolled thin and baked crisp."@en)
+AnnotationAssertion(rdfs:label :ThinAndCrispyBase "thin and crispy base"@en)
+SubClassOf(:ThinAndCrispyBase :PizzaBase)
+
+# Class: :TomatoTopping (tomato topping)
+
+AnnotationAssertion(obo:IAO_0000115 :TomatoTopping "A pizza topping of tomato."@en)
+AnnotationAssertion(rdfs:label :TomatoTopping "tomato topping"@en)
+SubClassOf(:TomatoTopping :VegetableTopping)
+
+# Class: :VegetableTopping (vegetable topping)
+
+AnnotationAssertion(obo:IAO_0000115 :VegetableTopping "A pizza topping made of a vegetable."@en)
+AnnotationAssertion(rdfs:label :VegetableTopping "vegetable topping"@en)
+SubClassOf(:VegetableTopping :PizzaTopping)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :menu_diavola (diavola (menu item))
+
+AnnotationAssertion(rdfs:label :menu_diavola "diavola (menu item)"@en)
+ClassAssertion(:Diavola :menu_diavola)
+ObjectPropertyAssertion(:hasBase :menu_diavola :menu_diavola_base)
+ObjectPropertyAssertion(:hasTopping :menu_diavola :menu_diavola_mozzarella)
+ObjectPropertyAssertion(:hasTopping :menu_diavola :menu_diavola_spicysalami)
+ObjectPropertyAssertion(:hasTopping :menu_diavola :menu_diavola_tomato)
+
+# Individual: :menu_diavola_base (diavola base)
+
+AnnotationAssertion(rdfs:label :menu_diavola_base "diavola base"@en)
+ClassAssertion(:ThinAndCrispyBase :menu_diavola_base)
+
+# Individual: :menu_diavola_mozzarella (diavola mozzarella)
+
+AnnotationAssertion(rdfs:label :menu_diavola_mozzarella "diavola mozzarella"@en)
+ClassAssertion(:MozzarellaTopping :menu_diavola_mozzarella)
+
+# Individual: :menu_diavola_spicysalami (diavola spicysalami)
+
+AnnotationAssertion(rdfs:label :menu_diavola_spicysalami "diavola spicysalami"@en)
+ClassAssertion(:SpicySalamiTopping :menu_diavola_spicysalami)
+
+# Individual: :menu_diavola_tomato (diavola tomato)
+
+AnnotationAssertion(rdfs:label :menu_diavola_tomato "diavola tomato"@en)
+ClassAssertion(:TomatoTopping :menu_diavola_tomato)
+
+# Individual: :menu_funghi (funghi (menu item))
+
+AnnotationAssertion(rdfs:label :menu_funghi "funghi (menu item)"@en)
+ClassAssertion(:Funghi :menu_funghi)
+ObjectPropertyAssertion(:hasBase :menu_funghi :menu_funghi_base)
+ObjectPropertyAssertion(:hasTopping :menu_funghi :menu_funghi_mozzarella)
+ObjectPropertyAssertion(:hasTopping :menu_funghi :menu_funghi_mushroom)
+ObjectPropertyAssertion(:hasTopping :menu_funghi :menu_funghi_tomato)
+
+# Individual: :menu_funghi_base (funghi base)
+
+AnnotationAssertion(rdfs:label :menu_funghi_base "funghi base"@en)
+ClassAssertion(:DeepPanBase :menu_funghi_base)
+
+# Individual: :menu_funghi_mozzarella (funghi mozzarella)
+
+AnnotationAssertion(rdfs:label :menu_funghi_mozzarella "funghi mozzarella"@en)
+ClassAssertion(:MozzarellaTopping :menu_funghi_mozzarella)
+
+# Individual: :menu_funghi_mushroom (funghi mushroom)
+
+AnnotationAssertion(rdfs:label :menu_funghi_mushroom "funghi mushroom"@en)
+ClassAssertion(:MushroomTopping :menu_funghi_mushroom)
+
+# Individual: :menu_funghi_tomato (funghi tomato)
+
+AnnotationAssertion(rdfs:label :menu_funghi_tomato "funghi tomato"@en)
+ClassAssertion(:TomatoTopping :menu_funghi_tomato)
+
+# Individual: :menu_hawaiian (hawaiian (menu item))
+
+AnnotationAssertion(rdfs:label :menu_hawaiian "hawaiian (menu item)"@en)
+ClassAssertion(:Hawaiian :menu_hawaiian)
+ObjectPropertyAssertion(:hasBase :menu_hawaiian :menu_hawaiian_base)
+ObjectPropertyAssertion(:hasTopping :menu_hawaiian :menu_hawaiian_ham)
+ObjectPropertyAssertion(:hasTopping :menu_hawaiian :menu_hawaiian_mozzarella)
+ObjectPropertyAssertion(:hasTopping :menu_hawaiian :menu_hawaiian_pineapple)
+ObjectPropertyAssertion(:hasTopping :menu_hawaiian :menu_hawaiian_tomato)
+
+# Individual: :menu_hawaiian_base (hawaiian base)
+
+AnnotationAssertion(rdfs:label :menu_hawaiian_base "hawaiian base"@en)
+ClassAssertion(:ThinAndCrispyBase :menu_hawaiian_base)
+
+# Individual: :menu_hawaiian_ham (hawaiian ham)
+
+AnnotationAssertion(rdfs:label :menu_hawaiian_ham "hawaiian ham"@en)
+ClassAssertion(:HamTopping :menu_hawaiian_ham)
+
+# Individual: :menu_hawaiian_mozzarella (hawaiian mozzarella)
+
+AnnotationAssertion(rdfs:label :menu_hawaiian_mozzarella "hawaiian mozzarella"@en)
+ClassAssertion(:MozzarellaTopping :menu_hawaiian_mozzarella)
+
+# Individual: :menu_hawaiian_pineapple (hawaiian pineapple)
+
+AnnotationAssertion(rdfs:label :menu_hawaiian_pineapple "hawaiian pineapple"@en)
+ClassAssertion(:PineappleTopping :menu_hawaiian_pineapple)
+
+# Individual: :menu_hawaiian_tomato (hawaiian tomato)
+
+AnnotationAssertion(rdfs:label :menu_hawaiian_tomato "hawaiian tomato"@en)
+ClassAssertion(:TomatoTopping :menu_hawaiian_tomato)
+
+# Individual: :menu_margherita (margherita (menu item))
+
+AnnotationAssertion(rdfs:label :menu_margherita "margherita (menu item)"@en)
+ClassAssertion(:Margherita :menu_margherita)
+ObjectPropertyAssertion(:hasBase :menu_margherita :menu_margherita_base)
+ObjectPropertyAssertion(:hasTopping :menu_margherita :menu_margherita_mozzarella)
+ObjectPropertyAssertion(:hasTopping :menu_margherita :menu_margherita_tomato)
+
+# Individual: :menu_margherita_base (margherita base)
+
+AnnotationAssertion(rdfs:label :menu_margherita_base "margherita base"@en)
+ClassAssertion(:ThinAndCrispyBase :menu_margherita_base)
+
+# Individual: :menu_margherita_mozzarella (margherita mozzarella)
+
+AnnotationAssertion(rdfs:label :menu_margherita_mozzarella "margherita mozzarella"@en)
+ClassAssertion(:MozzarellaTopping :menu_margherita_mozzarella)
+
+# Individual: :menu_margherita_tomato (margherita tomato)
+
+AnnotationAssertion(rdfs:label :menu_margherita_tomato "margherita tomato"@en)
+ClassAssertion(:TomatoTopping :menu_margherita_tomato)
+
+# Individual: :menu_quattro_formaggi (quattro formaggi (menu item))
+
+AnnotationAssertion(rdfs:label :menu_quattro_formaggi "quattro formaggi (menu item)"@en)
+ClassAssertion(:QuattroFormaggi :menu_quattro_formaggi)
+ObjectPropertyAssertion(:hasBase :menu_quattro_formaggi :menu_quattro_formaggi_base)
+ObjectPropertyAssertion(:hasTopping :menu_quattro_formaggi :menu_quattro_formaggi_fontina)
+ObjectPropertyAssertion(:hasTopping :menu_quattro_formaggi :menu_quattro_formaggi_gorgonzola)
+ObjectPropertyAssertion(:hasTopping :menu_quattro_formaggi :menu_quattro_formaggi_mozzarella)
+ObjectPropertyAssertion(:hasTopping :menu_quattro_formaggi :menu_quattro_formaggi_parmesan)
+ObjectPropertyAssertion(:hasTopping :menu_quattro_formaggi :menu_quattro_formaggi_tomato)
+
+# Individual: :menu_quattro_formaggi_base (quattro formaggi base)
+
+AnnotationAssertion(rdfs:label :menu_quattro_formaggi_base "quattro formaggi base"@en)
+ClassAssertion(:ThinAndCrispyBase :menu_quattro_formaggi_base)
+
+# Individual: :menu_quattro_formaggi_fontina (quattro formaggi fontina)
+
+AnnotationAssertion(rdfs:label :menu_quattro_formaggi_fontina "quattro formaggi fontina"@en)
+ClassAssertion(:FontinaTopping :menu_quattro_formaggi_fontina)
+
+# Individual: :menu_quattro_formaggi_gorgonzola (quattro formaggi gorgonzola)
+
+AnnotationAssertion(rdfs:label :menu_quattro_formaggi_gorgonzola "quattro formaggi gorgonzola"@en)
+ClassAssertion(:GorgonzolaTopping :menu_quattro_formaggi_gorgonzola)
+
+# Individual: :menu_quattro_formaggi_mozzarella (quattro formaggi mozzarella)
+
+AnnotationAssertion(rdfs:label :menu_quattro_formaggi_mozzarella "quattro formaggi mozzarella"@en)
+ClassAssertion(:MozzarellaTopping :menu_quattro_formaggi_mozzarella)
+
+# Individual: :menu_quattro_formaggi_parmesan (quattro formaggi parmesan)
+
+AnnotationAssertion(rdfs:label :menu_quattro_formaggi_parmesan "quattro formaggi parmesan"@en)
+ClassAssertion(:ParmesanTopping :menu_quattro_formaggi_parmesan)
+
+# Individual: :menu_quattro_formaggi_tomato (quattro formaggi tomato)
+
+AnnotationAssertion(rdfs:label :menu_quattro_formaggi_tomato "quattro formaggi tomato"@en)
+ClassAssertion(:TomatoTopping :menu_quattro_formaggi_tomato)
+
 
 )

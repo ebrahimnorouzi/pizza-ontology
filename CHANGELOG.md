@@ -3,6 +3,17 @@
 All notable changes to the Pizza Ontology. Versions follow [Semantic Versioning](https://semver.org/);
 each one is a release under `releases/<version>/` and a git tag `v<version>`.
 
+## [0.2.0] - 2026-10-31
+
+### Added
+- Iteration 1 (story S1, CQ1-CQ3): the **Componency** pattern imported from OntoBoard's library as
+  `imports/componency_import.owl`, and specialised: `Pizza`, `PizzaBase`, `PizzaTopping`, the
+  `hasBase` and `hasTopping` subproperties of `hasComponent`, two bases, eleven toppings in four
+  groups, five named pizzas, and the defined classes `SpicyPizza` and `CheesyPizza`.
+- One menu item per named pizza, with its base and toppings, as test data.
+- CQ tests `src/sparql/cq1_every_pizza_has_a_base.rq`, `cq2_toppings_are_toppings.rq`; CQ queries
+  and answers in `docs/cq/`. The reasoner infers `Diavola` under `SpicyPizza` (CQ3).
+
 ## [0.1.0] - 2026-10-31
 
 ### Added

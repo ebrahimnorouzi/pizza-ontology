@@ -30,6 +30,7 @@ products:
   - id: pizza/pizza-base.json
     name: "Pizza Ontology additional release in OBOJSon format"
 dependencies:
+- id: componency
 tracker: https://github.com//pizza/issues
 license:
   url: http://creativecommons.org/licenses/by/3.0/

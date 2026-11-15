@@ -1,0 +1,12 @@
+# Terms extracted into componency_import.owl
+# Source: http://www.ontologydesignpatterns.org/cp/owl/componency.owl
+# Pattern: componency
+# From OntoBoard's pattern library, so nothing downloads it and Refresh
+# imports leaves it alone. To change what the module contains, use
+# OntoBoard > ROBOT > Pattern library... and import the pattern again.
+# One term per line.
+http://www.ontologydesignpatterns.org/cp/owl/componency.owl#Object
+http://www.ontologydesignpatterns.org/cp/owl/componency.owl#hasComponent
+http://www.ontologydesignpatterns.org/cp/owl/componency.owl#isComponentOf
+http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart
+http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf

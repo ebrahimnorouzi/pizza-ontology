@@ -1,0 +1,8 @@
+# CQ2 test: everything put on a pizza as a topping is a pizza topping. Lists what is not.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX pizza: <https://ebrahimnorouzi.github.io/pizza-ontology/pizza.owl#>
+SELECT ?pizza ?topping WHERE {
+  ?pizza pizza:hasTopping ?topping .
+  FILTER NOT EXISTS { ?topping rdf:type/rdfs:subClassOf* pizza:PizzaTopping }
+}
